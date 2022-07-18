@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "第一篇Blog"
+title:  "The First Blog"
 date:   2022-07-18 22:18:25
 categories: essay
 ---
