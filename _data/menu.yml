@@ -9,14 +9,21 @@ entries:
         url: https://github.com/riggraz/no-style-please
       - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
 
-  - title: all posts
+  - title: recent posts
     post_list:
       limit: 5
       show_more: true
       show_more_text: See archive...
       show_more_url: archive.html
 
-  - title: posts by category
+  - title: solution
+    post_list:
+      category: solution
+      show_more: true
+      show_more_text: See more posts...
+      show_more_url: solution-archive.html
+
+  - title: essay
     post_list:
       category: essay
       show_more: true
