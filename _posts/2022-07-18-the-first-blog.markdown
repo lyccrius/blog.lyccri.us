@@ -2,7 +2,7 @@
 layout: post
 title:  "The First Blog"
 date:   2022-07-18 22:18:25
-categories: 
+categories: jekyll update
 ---
 
 > 今天是2022年7月18日，Lyccrius的新Blog终于建成了。  
