@@ -18,10 +18,10 @@ entries:
 
   - title: posts by category
     post_list:
-      category: example2
+      category: essay
       show_more: true
       show_more_text: See more posts...
-      show_more_url: example2-archive.html
+      show_more_url: essay-archive.html
 
   - title: rss
     url: feed.xml
@@ -31,7 +31,7 @@ entries:
       - title: with subitems
         entries:
           - title: with subsubitems
-          - title: example page
+          - title: about
             url: about
   - title: PRO TIP
     entries:
