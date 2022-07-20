@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-20T17:49:00+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
-</subtitle><author><name>Lyccrius</name></author><entry><title type="html">第一篇Blog</title><link href="http://localhost:4000/essay/test/the-first-blog.html" rel="alternate" type="text/html" title="第一篇Blog" /><published>2022-07-18T22:18:25+08:00</published><updated>2022-07-18T22:18:25+08:00</updated><id>http://localhost:4000/essay/test/the-first-blog</id><content type="html" xml:base="http://localhost:4000/essay/test/the-first-blog.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-20T23:05:30+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+</subtitle><author><name>Lyccrius</name></author><entry><title type="html">第一篇Blog</title><link href="http://localhost:4000/essay/the-first-blog.html" rel="alternate" type="text/html" title="第一篇Blog" /><published>2022-07-18T22:18:25+08:00</published><updated>2022-07-18T22:18:25+08:00</updated><id>http://localhost:4000/essay/the-first-blog</id><content type="html" xml:base="http://localhost:4000/essay/the-first-blog.html"><![CDATA[<blockquote>
   <p>今天是2022年7月18日，Lyccrius的新Blog终于建成了。</p>
 </blockquote>
 
@@ -15,4 +15,4 @@
 
 <p>这次的新的blog于2022.7.16开始搭建，于2022.7.18建成 <del>（在XJ搞机有时候真的会很麻烦）</del> 。</p>
 
-<p>第一篇Blog就作为我建站的一份回忆录吧（现在是2022.7.19 22:42我才写完qwq）！</p>]]></content><author><name>Lyccrius</name></author><category term="essay" /><category term="test" /><summary type="html"><![CDATA[今天是2022年7月18日，Lyccrius的新Blog终于建成了。]]></summary></entry></feed>
+<p>第一篇Blog就作为我建站的一份回忆录吧（现在是2022.7.19 22:42我才写完qwq）！</p>]]></content><author><name>Lyccrius</name></author><category term="essay" /><summary type="html"><![CDATA[今天是2022年7月18日，Lyccrius的新Blog终于建成了。]]></summary></entry></feed>

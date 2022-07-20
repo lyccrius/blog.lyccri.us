@@ -2,22 +2,6 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info
-    entries:
-      - title: about
-        url: about
-      - title: rss
-        url: feed.xml
-      - title: contact
-        url: mailto:lyccrius@outlook.com
-      - title: github repo
-        url: https://github.com/lyccrius/lyccrius.github.io
-      - title: friend-link
-        url: friend-link
-      - title: "Compile with theme <a href='https://github.com/riggraz/no-style-please/'>no-style-please</a>"
-      - title: "Build with <a href='https://www.jekyll.com.cn'>Jekyll</a>"
-      - title: "Build on <a href='https://pages.github.com'>Github Pages</a>"
-
   - title: recent posts
     post_list:
       limit: 5
@@ -31,7 +15,7 @@ entries:
       category: course
       show_more: true
       show_more_text: See more posts...
-      show_more_url: course.html
+      show_more_url: course
 
   - title: solution
     post_list:
@@ -39,20 +23,31 @@ entries:
       category: solution
       show_more: true
       show_more_text: See more posts...
-      show_more_url: solution.html
+      show_more_url: solution
 
   - title: essay
-    entries:
-      - title: test
-        post_list:
-          
-          category: test
-          show_more: true
-          show_more_text: See more posts...
-          show_more_url: test.html
     post_list:
       limit: 3
       category: essay
       show_more: true
       show_more_text: See more posts...
-      show_more_url: essay.html
+      show_more_url: essay
+
+  - title: info
+    entries:
+      - title: about
+        url: about
+      - title: commit
+        url: commit
+      - title: rss
+        url: feed.xml
+      - title: contact
+        url: mailto:lyccrius@outlook.com
+      - title: friend-link
+        url: friend-link
+      - title: github repo
+        url: https://github.com/lyccrius/lyccrius.github.io
+        entries:
+        - title: "Compile with theme <a href='https://github.com/riggraz/no-style-please/'>no-style-please</a>"
+        - title: "Build with <a href='https://www.jekyll.com.cn'>Jekyll</a>"
+        - title: "Build on <a href='https://pages.github.com'>Github Pages</a>"

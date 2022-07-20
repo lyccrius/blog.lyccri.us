@@ -2,7 +2,7 @@
 layout: post
 title:  "第一篇Blog"
 date:   2022-07-18 22:18:25 +0800
-categories: essay test
+categories: essay
 ---
 
 > 今天是2022年7月18日，Lyccrius的新Blog终于建成了。  
