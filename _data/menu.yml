@@ -4,10 +4,17 @@
 entries:
   - title: info
     entries:
-      - title: a (nearly) no-CSS, fast, minimalist Jekyll theme.
+      - title: about
+        url: about
+      - title: rss
+        url: feed.xml
+      - title: contact
+        url: mailto:lyccrius@outlook.com
       - title: github repo
-        url: https://github.com/riggraz/no-style-please
-      - title: "used by <a href='https://riggraz.dev'>riggraz.dev</a> and <a href='https://github.com/riggraz/no-style-please/network/dependents'>many others</a>"
+        url: https://github.com/lyccrius/lyccrius.github.io
+      - title: "Compile with theme <a href='https://github.com/riggraz/no-style-please/'>no-style-please</a>"
+      - title: "Build with <a href='https://www.jekyll.com.cn'>Jekyll</a>"
+      - title: "Build on <a href='https://pages.github.com'>Github Pages</a>"
 
   - title: recent posts
     post_list:
@@ -16,8 +23,17 @@ entries:
       show_more_text: See archive...
       show_more_url: archive.html
 
+  - title: course
+    post_list:
+      limit: 3
+      category: course
+      show_more: true
+      show_more_text: See more posts...
+      show_more_url: course-archive.html
+
   - title: solution
     post_list:
+      limit: 3
       category: solution
       show_more: true
       show_more_text: See more posts...
@@ -30,17 +46,3 @@ entries:
       show_more: true
       show_more_text: See more posts...
       show_more_url: essay-archive.html
-
-  - title: rss
-    url: feed.xml
-  
-  - title: another list
-    entries:
-      - title: with subitems
-        entries:
-          - title: with subsubitems
-          - title: about
-            url: about
-  - title: PRO TIP
-    entries:
-      - title: to edit this menu, edit _data/menu.yml file
