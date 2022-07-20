@@ -18,6 +18,7 @@ entries:
 
   - title: solution
     post_list:
+      limit: 3
       category: solution
       show_more: true
       show_more_text: See more posts...
