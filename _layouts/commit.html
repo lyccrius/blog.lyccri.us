@@ -9,7 +9,6 @@
             <section class="item" v-for="item in contents" v-cloak>
                 <blockquote>
                     <p v-html='item.attributes.content'></p>
-                    <br>
                     <p v-html='item.attributes.time'></p>
                 </blockquote>
             </section>
@@ -66,7 +65,7 @@
                     resC.forEach((i) => {
                         let dateTmp = new Date(i.createdAt);
                         i.attributes.time = `${dateTmp.getFullYear()}-${(dateTmp.getMonth() + 1) < 10 ? ('0' + (dateTmp.getMonth()+1)) : dateTmp.getMonth()+1}-${(dateTmp.getDate() + 1) < 10 ? ('0' + dateTmp.getDate()) : dateTmp.getDate()} ${(dateTmp.getHours() + 1) <= 10 ? ('0' + dateTmp.getHours()) : dateTmp.getHours()}:${(dateTmp.getMinutes() + 1) <= 10 ? ('0' + dateTmp.getMinutes()) : dateTmp.getMinutes()}`;
-                        i.attributes.content = urlToLink(i.attributes.content);
+                        i.attributes.content = "<pre>" + urlToLink(i.attributes.content) + "</pre>";
                         app.contents.push(i);
                     })
                 }
