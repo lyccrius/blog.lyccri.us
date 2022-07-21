@@ -9,13 +9,15 @@ entries:
       show_more_text: See archive...
       show_more_url: archive.html
 
-  - title: course
-    post_list:
-      limit: 3
-      category: course
-      show_more: true
-      show_more_text: See more posts...
-      show_more_url: course
+  - title: note
+    entries:
+      - title: oi
+        post_list:
+          limit: 3
+          category: oi
+          show_more: true
+          show_more_text: See more posts...
+          show_more_url: note/oi
 
   - title: solution
     post_list:
