@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "我在想"
-date:   2022-04-21 09:28:20 +0800
 categories: essay
 ---
 
