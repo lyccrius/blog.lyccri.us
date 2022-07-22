@@ -1,10 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-21T12:02:41+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
-</subtitle><author><name>Lyccrius</name></author><entry><title type="html">[Acwing算法基础课]二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="[Acwing算法基础课]二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
-  <p>7月14号张老师给我布置任务让我15号讲二分
-7月15号返校听填报志愿指导没讲成
-7月16号内部比赛又没江城
-7月17号讲的归并排序
-哈哈哈哈哈哈哈。。。。。。。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-22T12:20:37+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+</subtitle><author><name>Lyccrius</name></author><entry><title type="html">《算法竞赛进阶指南》 0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》 0x01 位运算" /><published>2022-07-22T10:16:56+08:00</published><updated>2022-07-22T10:16:56+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x代表16进制
+0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。
+8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。</p>
+
+<h2 id="补码">补码</h2>
+<h3 id="32位无符号整数-unsigned-int">32位无符号整数 unsigned int：</h3>
+<p>直接把这32位编码C看作32位二进制数n。</p>
+<h3 id="32位有符号整数-int">32位有符号整数 int：</h3>
+<p>以最高位为符号位，0表示非负数，1表示负数。<br />
+对于最高位为0的每种编码C，直接看作32位二进制数S。<br />
+同时，定义该编码按位取反后得到的编码~C表示的数值为-1-S。<br />
+在补码下每个数值都有唯一的表示方式，并且任意两个数值做加减法运算，都等价于在32为补码下做<strong>最高位不进位</strong>的二进制加减法运算。</p>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x代表16进制 0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。 8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。]]></summary></entry><entry><title type="html">[Acwing算法基础课]二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="[Acwing算法基础课]二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
+  <p>7月14号老师布置任务让15号讲二分<br />
+7月15号返校听填报志愿指导没讲成<br />
+7月16号组织了场内部比赛又没讲成<br />
+7月17号最后又安排我讲的归并排序<br />
+哈哈哈哈哈哈哈哈。。。。。。。。</p>
 </blockquote>
 
 <h1 id="引入">引入</h1>
@@ -23,7 +34,42 @@
 <p>至于判断数字x是否存在于序列a中，则可根据二分得到的边界值进行判断，即判断 <code class="language-plaintext highlighter-rouge">a[i] == x</code> 。</p>
 
 <h1 id="模版">模版</h1>
-<p>这里粘两个 <code class="language-plaintext highlighter-rouge">yxc</code> 的二分模版</p>]]></content><author><name>Lyccrius</name></author><category term="note" /><category term="oi" /><summary type="html"><![CDATA[7月14号张老师给我布置任务让我15号讲二分 7月15号返校听填报志愿指导没讲成 7月16号内部比赛又没江城 7月17号讲的归并排序 哈哈哈哈哈哈哈。。。。。。。]]></summary></entry><entry><title type="html">第一篇Blog</title><link href="http://localhost:4000/essay/the-first-blog.html" rel="alternate" type="text/html" title="第一篇Blog" /><published>2022-07-18T22:18:25+08:00</published><updated>2022-07-18T22:18:25+08:00</updated><id>http://localhost:4000/essay/the-first-blog</id><content type="html" xml:base="http://localhost:4000/essay/the-first-blog.html"><![CDATA[<blockquote>
+<p>这里粘两个 <code class="language-plaintext highlighter-rouge">yxc</code> 的二分模版</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 区间[l, r]被划分成[l, mid]和[mid + 1, r]时使用：
+int bsearch_1(int l, int r)
+{
+    while (l &lt; r)
+    {
+        int mid = l + r &gt;&gt; 1;
+        if (check(mid)) r = mid;
+        else l = mid + 1;
+    }
+    return l;
+}
+
+// 区间[l, r]被划分成[l, mid - 1]和[mid, r]时使用：
+int bsearch_2(int l, int r)
+{
+    while (l &lt; r)
+    {
+        int mid = l + r  + 1 &gt;&gt; 1;
+        if (check(mid)) l = mid;
+        else r = mid - 1;
+    }
+    return l;
+}
+</code></pre></div></div>
+
+<p>讲一下第二个板子为什么 <code class="language-plaintext highlighter-rouge">mid = l + r + 1 &gt;&gt; 1</code> 要 <code class="language-plaintext highlighter-rouge">+1</code> 。</p>
+
+<p>当 <code class="language-plaintext highlighter-rouge">l</code> 与 <code class="language-plaintext highlighter-rouge">r</code> 差值为 <code class="language-plaintext highlighter-rouge">1</code> 时，<code class="language-plaintext highlighter-rouge">mid = l + r + 1 &gt;&gt; 1</code> 后 <code class="language-plaintext highlighter-rouge">l</code> 值与 <code class="language-plaintext highlighter-rouge">mid</code> 相同。此后若 <code class="language-plaintext highlighter-rouge">check(mid)</code> 返回值为 <code class="language-plaintext highlighter-rouge">true</code> ，<code class="language-plaintext highlighter-rouge">l</code> 的值仍与 <code class="language-plaintext highlighter-rouge">mid</code> 相同，这将进入一个死循环而导致 <code class="language-plaintext highlighter-rouge">RE</code> 。故需要 <code class="language-plaintext highlighter-rouge">+ 1</code> 使得写入 <code class="language-plaintext highlighter-rouge">mid</code> 的值为 <code class="language-plaintext highlighter-rouge">r</code> 。</p>
+
+<p>至于什么情况下需要 <code class="language-plaintext highlighter-rouge">+ 1</code> ，请自行理解并视情况而定。</p>
+
+<blockquote>
+  <p>STO yxc OTZ</p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="note" /><category term="oi" /><summary type="html"><![CDATA[7月14号老师布置任务让15号讲二分 7月15号返校听填报志愿指导没讲成 7月16号组织了场内部比赛又没讲成 7月17号最后又安排我讲的归并排序 哈哈哈哈哈哈哈哈。。。。。。。。]]></summary></entry><entry><title type="html">第一篇Blog</title><link href="http://localhost:4000/essay/the-first-blog.html" rel="alternate" type="text/html" title="第一篇Blog" /><published>2022-07-18T22:18:25+08:00</published><updated>2022-07-18T22:18:25+08:00</updated><id>http://localhost:4000/essay/the-first-blog</id><content type="html" xml:base="http://localhost:4000/essay/the-first-blog.html"><![CDATA[<blockquote>
   <p>今天是2022年7月18日，Lyccrius的新Blog终于建成了。</p>
 </blockquote>
 
