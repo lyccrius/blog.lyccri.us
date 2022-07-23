@@ -62,11 +62,11 @@ int bsearch_2(int l, int r)
 至于什么情况下需要 `+ 1` ，请自行理解并视情况而定。
 
 # 习题及代码
-> https://www.acwing.com/problem/content/791/
-> https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/791
+> [Acwing 789. 数的范围](https://www.acwing.com/problem/content/791/)  
+> [Lyccrius's Code](https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/791)
 
-> https://www.acwing.com/problem/content/792/
->https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/792
+> [AcWing 790. 数的三次方根](https://www.acwing.com/problem/content/792/)  
+> [Lyccrius's Code](https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/792)
 
-
+---
 > STO yxc OTZ
