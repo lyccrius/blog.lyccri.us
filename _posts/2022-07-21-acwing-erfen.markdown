@@ -69,4 +69,5 @@ int bsearch_2(int l, int r)
 > [Lyccrius's Code](https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/792)
 
 ---
+
 > STO yxc OTZ
