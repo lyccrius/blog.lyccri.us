@@ -1,5 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-24T12:10:51+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
-</subtitle><author><name>Lyccrius</name></author><entry><title type="html">《算法竞赛进阶指南》0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x01 位运算" /><published>2022-07-22T10:16:56+08:00</published><updated>2022-07-22T10:16:56+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x代表16进制<br />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-24T13:27:20+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+</subtitle><author><name>Lyccrius</name></author><entry><title type="html">AcWing 89. a^b</title><link href="http://localhost:4000/solution/acwing/89.html" rel="alternate" type="text/html" title="AcWing 89. a^b" /><published>2022-07-24T00:00:00+08:00</published><updated>2022-07-24T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/89</id><content type="html" xml:base="http://localhost:4000/solution/acwing/89.html"><![CDATA[<blockquote>
+  <p>题目链接：<a href="https://www.acwing.com/problem/content/91/">89. a^b -AcWing题库</a></p>
+</blockquote>
+
+<p>如果 $b$ 在二进制表示下有 $k$ 位，其中第 $i(0\le i&lt;k)$ 位的数字是 $c_i$ ，那么：</p>
+<blockquote>
+  <p>$b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+…+c_{0}2^{0}$</p>
+</blockquote>
+
+<p>于是：</p>
+<blockquote>
+  <p>$a^{b}=a^{c_{k-1}<em>2^{k-1}}</em>a^{c_{k-2}<em>2^{k-2}}</em>…<em>a^{c_{0}</em>2^{0}}$</p>
+</blockquote>
+
+<p>因为 $k=\lceil{log_2(b+1)}\rceil$ ，所以上式乘积项的数量不多于 $\lceil{log_2(b+1)}\rceil$ 个。<br />
+又因为：</p>
+<blockquote>
+  <p>$a^{2^i}=(a^{2^{i-1}})^2$</p>
+</blockquote>
+
+<p>所以很容易通过 $k$ 次递推求出每个乘积项，当 $c_i=1$ 时，把该乘积项累积到答案中。</p>
+<ul>
+  <li>$b\&amp;1$ 运算可以取出 $b$ 在二进制表示下的最低位</li>
+  <li>$b»1$ 运算可以舍去最低位</li>
+</ul>
+
+<p>在递推的过程中将二者结合，就可以遍历 $b$ 在二进制表示下的所有数位 $c_i$ 。</p>
+
+<p>整个算法的时间复杂度位 $O(log_2b)$。</p>
+
+<blockquote>
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/91">a^b.cpp</a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：89. a^b -AcWing题库]]></summary></entry><entry><title type="html">《算法竞赛进阶指南》0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x01 位运算" /><published>2022-07-22T10:16:56+08:00</published><updated>2022-07-22T10:16:56+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x代表16进制<br />
 0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。<br />
 8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。</p>
 
@@ -51,7 +83,7 @@
 <h3 id="逻辑右移">逻辑右移</h3>
 <p>在二进制位补码表示下把数字同时向右移动，高位以0填充，低位越界后舍弃。<br />
 一般编译器均使用算数右移。<br />
-默认右移操作采用算数右移。</p>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x代表16进制 0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。 8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。]]></summary></entry><entry><title type="html">[Acwing算法基础课]二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="[Acwing算法基础课]二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
+默认右移操作采用算数右移。</p>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x代表16进制 0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。 8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。]]></summary></entry><entry><title type="html">AcWing 算法基础课 二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="AcWing 算法基础课 二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
   <p>7月14号老师布置任务让15号讲二分<br />
 7月15号返校听填报志愿指导没讲成<br />
 7月16号组织了场内部比赛又没讲成<br />

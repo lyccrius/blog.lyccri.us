@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Acwing算法基础课]二分"
+title:  "AcWing 算法基础课 二分"
 date:   2022-07-21 11:32:55 +0800
 categories: note oi
 ---
