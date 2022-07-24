@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-24T13:27:20+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-24T20:48:27+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
 </subtitle><author><name>Lyccrius</name></author><entry><title type="html">AcWing 89. a^b</title><link href="http://localhost:4000/solution/acwing/89.html" rel="alternate" type="text/html" title="AcWing 89. a^b" /><published>2022-07-24T00:00:00+08:00</published><updated>2022-07-24T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/89</id><content type="html" xml:base="http://localhost:4000/solution/acwing/89.html"><![CDATA[<blockquote>
   <p>题目链接：<a href="https://www.acwing.com/problem/content/91/">89. a^b -AcWing题库</a></p>
 </blockquote>
@@ -10,7 +10,7 @@
 
 <p>于是：</p>
 <blockquote>
-  <p>$a^{b}=a^{c_{k-1}<em>2^{k-1}}</em>a^{c_{k-2}<em>2^{k-2}}</em>…<em>a^{c_{0}</em>2^{0}}$</p>
+\[{a^b}=a^{c_{k-1}*2^{k-1}}*a^{c_{k-1}*2^{k-1}}*…*a^{c_0*2^0}\]
 </blockquote>
 
 <p>因为 $k=\lceil{log_2(b+1)}\rceil$ ，所以上式乘积项的数量不多于 $\lceil{log_2(b+1)}\rceil$ 个。<br />
