@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-22T12:28:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
-</subtitle><author><name>Lyccrius</name></author><entry><title type="html">《算法竞赛进阶指南》 0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》 0x01 位运算" /><published>2022-07-22T10:16:56+08:00</published><updated>2022-07-22T10:16:56+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x代表16进制
-0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-24T12:10:51+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+</subtitle><author><name>Lyccrius</name></author><entry><title type="html">《算法竞赛进阶指南》0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x01 位运算" /><published>2022-07-22T10:16:56+08:00</published><updated>2022-07-22T10:16:56+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x代表16进制<br />
+0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。<br />
 8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。</p>
 
 <h2 id="补码">补码</h2>
@@ -10,7 +10,48 @@
 <p>以最高位为符号位，0表示非负数，1表示负数。<br />
 对于最高位为0的每种编码C，直接看作32位二进制数S。<br />
 同时，定义该编码按位取反后得到的编码~C表示的数值为-1-S。<br />
-在补码下每个数值都有唯一的表示方式，并且任意两个数值做加减法运算，都等价于在32为补码下做<strong>最高位不进位</strong>的二进制加减法运算。</p>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x代表16进制 0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。 8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。]]></summary></entry><entry><title type="html">[Acwing算法基础课]二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="[Acwing算法基础课]二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
+在补码下每个数值都有唯一的表示方式，并且任意两个数值做加减法运算，都等价于在32为补码下做<strong>最高位不进位</strong>的二进制加减法运算。</p>
+<blockquote>
+  <p>正数：原码=反码=补码<br />
+负数：反码=原码除符号位取反；补码=反码+1<br />
+个人理解：负数补码的符号位相当于<code class="language-plaintext highlighter-rouge">-2147483648</code>，其余位与正数表示数值相同。</p>
+</blockquote>
+
+<h4 id="0x3f-3f-3f-3f">0x3F 3F 3F 3F</h4>
+<p>满足以下两个条件的最大整数。</p>
+<ol>
+  <li>整数的两倍不超过 0x7F FF FF FF，即int能表示的最大正整数。</li>
+  <li>整数的每8位（每个字节）都是相同的。</li>
+</ol>
+
+<h4 id="memset">memset</h4>
+<p><code class="language-plaintext highlighter-rouge">memset(a, val, sizeof(a));</code><br />
+把数值 val(0x00~0xFF) 填充到数组a的每个字节上。<br />
+1个int占用4个字节，所以只能赋值出“每8位都相同”的int。<br />
+综上所述，0x7F 7F 7F 7F 是能初始化出的最大数值。<br />
+把数值初始化成正无穷时，为避免加法算数上溢或繁琐的判断，用<code class="language-plaintext highlighter-rouge">memset(a, 0x3f, sizeof(a))</code>来代替。</p>
+
+<h2 id="移位运算">移位运算</h2>
+
+<h3 id="左移">左移</h3>
+<p>在二进制表示下把数字同时向左移动，低位以0填充，高位越界后舍弃。</p>
+<blockquote>
+  <p>1 « n = $2^n$, n « 1 = 2n</p>
+</blockquote>
+
+<h3 id="算数右移">算数右移</h3>
+<p>在二进制补码表示下把数字同时向右移动，高位以符号位填充，低位越界后舍弃。</p>
+<blockquote>
+  <p>n » 1 = $\lfloor {n \over 2.0} \rfloor$</p>
+</blockquote>
+
+<p>算数右移等于除以2向下取整，(-3) » 2 = -2，3 » 1 = 1。<br />
+“整数/2”在C++中实现为“除以2向零取整”，(-3) / 2 = -1，3 / 2 = 1。</p>
+
+<h3 id="逻辑右移">逻辑右移</h3>
+<p>在二进制位补码表示下把数字同时向右移动，高位以0填充，低位越界后舍弃。<br />
+一般编译器均使用算数右移。<br />
+默认右移操作采用算数右移。</p>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x代表16进制 0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。 8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。]]></summary></entry><entry><title type="html">[Acwing算法基础课]二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="[Acwing算法基础课]二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
   <p>7月14号老师布置任务让15号讲二分<br />
 7月15号返校听填报志愿指导没讲成<br />
 7月16号组织了场内部比赛又没讲成<br />
@@ -67,6 +108,19 @@ int bsearch_2(int l, int r)
 
 <p>至于什么情况下需要 <code class="language-plaintext highlighter-rouge">+ 1</code> ，请自行理解并视情况而定。</p>
 
+<h1 id="习题及代码">习题及代码</h1>
+<blockquote>
+  <p><a href="https://www.acwing.com/problem/content/791/">Acwing 789. 数的范围</a><br />
+<a href="https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/791">Lyccrius’s Code</a></p>
+</blockquote>
+
+<blockquote>
+  <p><a href="https://www.acwing.com/problem/content/792/">AcWing 790. 数的三次方根</a><br />
+<a href="https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/792">Lyccrius’s Code</a></p>
+</blockquote>
+
+<hr />
+
 <blockquote>
   <p>STO yxc OTZ</p>
 </blockquote>]]></content><author><name>Lyccrius</name></author><category term="note" /><category term="oi" /><summary type="html"><![CDATA[7月14号老师布置任务让15号讲二分 7月15号返校听填报志愿指导没讲成 7月16号组织了场内部比赛又没讲成 7月17号最后又安排我讲的归并排序 哈哈哈哈哈哈哈哈。。。。。。。。]]></summary></entry><entry><title type="html">第一篇Blog</title><link href="http://localhost:4000/essay/the-first-blog.html" rel="alternate" type="text/html" title="第一篇Blog" /><published>2022-07-18T22:18:25+08:00</published><updated>2022-07-18T22:18:25+08:00</updated><id>http://localhost:4000/essay/the-first-blog</id><content type="html" xml:base="http://localhost:4000/essay/the-first-blog.html"><![CDATA[<blockquote>
@@ -85,7 +139,61 @@ int bsearch_2(int l, int r)
 
 <p>这次的新的blog于2022.7.16开始搭建，于2022.7.18建成 <del>（在XJ搞机有时候真的会很麻烦）</del> 。</p>
 
-<p>第一篇Blog就作为我建站的一份回忆录吧（现在是2022.7.19 22:42我才写完qwq）！</p>]]></content><author><name>Lyccrius</name></author><category term="essay" /><summary type="html"><![CDATA[今天是2022年7月18日，Lyccrius的新Blog终于建成了。]]></summary></entry><entry><title type="html">我在想</title><link href="http://localhost:4000/essay/wo-zai-xiang.html" rel="alternate" type="text/html" title="我在想" /><published>2022-04-21T09:28:20+08:00</published><updated>2022-04-21T09:28:20+08:00</updated><id>http://localhost:4000/essay/wo-zai-xiang</id><content type="html" xml:base="http://localhost:4000/essay/wo-zai-xiang.html"><![CDATA[<p>我在想语文还有半个单元文言文注解没背，作文的新素材也没有找好。数学最近是不是有点小退步，计算还是不太仔细，圆和二次函数应用题的掌握还有没有问题，怎么办学霸前桌又在把我往死里卷惨绝人寰不留余地。英语听写还没背糟糕，八年级英语单词还有一部分不会拼。物理化学听说下周考试，实验探究又要一分分的扣。还有政治历史，能不能再多空一些时间出来学，能不能再努力一点。</p>
+<p>第一篇Blog就作为我建站的一份回忆录吧（现在是2022.7.19 22:42我才写完qwq）！</p>]]></content><author><name>Lyccrius</name></author><category term="essay" /><summary type="html"><![CDATA[今天是2022年7月18日，Lyccrius的新Blog终于建成了。]]></summary></entry><entry><title type="html">第一次 Newsletter</title><link href="http://localhost:4000/essay/newsletter-1.html" rel="alternate" type="text/html" title="第一次 Newsletter" /><published>2022-06-15T00:00:00+08:00</published><updated>2022-06-15T00:00:00+08:00</updated><id>http://localhost:4000/essay/newsletter-1</id><content type="html" xml:base="http://localhost:4000/essay/newsletter-1.html"><![CDATA[<blockquote>
+  <p>“在追寻一个方向的路上，出现的绊脚石也不一定是绊脚石。可能它只是想让你停下来思考你是否在正确的道路上。”——uncle-lu</p>
+</blockquote>
+
+<h2 id="topic1">Topic 1</h2>
+<p>最近一段时间经常被某问题困扰并受其影响，今天下午自习课上修改作文时突然意识到下面这段话：</p>
+<blockquote>
+  <p>“所以说我现在真正需要解决的问题，并不是怎样去处理和对待此类的人和事，而是怎样去恰当、合理地认识和看待他们，以及个人观念和行为模式的修正等问题。”</p>
+</blockquote>
+
+<p>首先，我们来聊聊我究竟遇到了什么问题。</p>
+
+<p>问题是：在即将面临中考的时局下，不得不在社交方面进行一些取舍，然而这样的取舍外加一些外界因素导致了我内心不平衡而出现杞人忧天的现象。</p>
+
+<p>通过比对环境变量我发现，根本问题在于人民（我）日益增长的美好生活需要与不平衡不充分的发展之间的矛盾。那么可以将问题拆解为“美好生活需要日益增长”与“发展不平衡不充分”两部分。</p>
+
+<p>其次，就这两个部分进行深入探讨分析。</p>
+
+<p>先来看“美好生活需要日益增长”。这种现象产生是由于受过往经历、社会风气和当下主流行为习惯的影响，没能够对“美好生活”产生相对恰当理性的认识，或者说认识过于片面仅仅停留在理论方面，导致无法贯彻落实在具体行动当中。</p>
+
+<p>再来看“发展不平衡不充分”。不恰当的认识产生不恰当的“美好生活需要”，不恰当的“美好生活需要”长期以来无法实现导致矛盾加剧。这样不恰当的“美好生活需要”，却在另一群体上以一种极其不合时宜（猥琐）的方式实现。这样的矛盾长时间以来无法得以解决，理想状态与现实生活落差大而导致矛盾加剧。</p>
+
+<p>明晰了问题所在，然后我们来探究解决问题的方法。</p>
+
+<p>既然问题已经存在一段时间且矛盾并未消除，那么不难推测问题的解决并非容易之事。</p>
+
+<p>上文提到问题产生的关键在于“不恰当的认识”和“理想与现实的差异”。</p>
+
+<p>就“不恰当的认识”而言，我很早就意识到了这样的认识是不恰当的，却无法将这样观念落实在具体行动中。这或许是一年前的历史遗留问题。既然问题长期存在且无法克服，那么我们不妨先尝试适应并接受这种环境状态，在此过程中慢慢改变自身观念并将相对合理的认识落实于现实。</p>
+
+<p>“理想与现实的差异”始终存在，学会接受这一现象并努力拼搏让现实朝着理想前进，是我们个人成长的必由之路，也是当下急需掌握的一项本领。</p>
+
+<p>最后来做一个小结。</p>
+
+<p>“杞国有人忧天地崩坠，身亡所寄，废寝食者。”整天怀着毫无必要的担心和无穷无尽的忧愁，终将成为自扰又扰人的庸人。这一问题所反映出的不仅仅是我对于理想和现实认识的不适宜，更重要的是自身思考方式和行为模式的不合理。我的独立思维才初步建立，误入歧途会在这一阶段是常有的事，思想境界迈进一级小台阶也将成为常态。或许我过去、现在及未来会面临的一切问题都将因生活阅历的丰富和知识储备的提升得以解决，那么我现在唯一需要去做的事情就是——<br />
+去学习。</p>
+
+<h2 id="topic2">Topic 2</h2>
+<p>在 Topic 1 中提到，某些外界因素或许会对我产生一些或好或坏的影响，甚者会产生历史遗留问题对未来发展产生不良影响。由此可见，当前的我的精神世界是很容易受外界干扰的。</p>
+
+<p>“淫慢则不能励精，险躁则不能治性。”如果我长期容易受外界干扰的话，那么在独立思维的发展过程中，误入歧途的概率将大幅提升，这并不利于我人生的走向及未来的发展。</p>
+
+<p>各方面观点、势力共同存在于网络空间中，各自欣赏、相互尊重、兼收并蓄、包容开放，这是我认为网络生活运转的理想状态。可这样的状态想要实现，况且不谈整个社会，就是对各个社会成员而言又何谈容易？</p>
+
+<p>在当前互联网产业链蓬勃发展的时代背景下，我认为个人想要尽可能减小收到互联网文化思潮对个人的冲击最有效最直接的方式是——<br />
+信息节食。</p>
+
+<h2 id="topic3">Topic 3</h2>
+<p>昨日与姜老师的谈话当中，姜老师提到：我对自己的期望值太高了。不得不承认，我确实如此。过去三年的我希望能够进入年级前三十，可我的努力程度自始至终都没有一天与该目标相匹配，目标自然从未达成。临近中考，我又希望自己能够考入一中理特班。毋庸置疑，我并不相信我能够做到。</p>
+
+<p>现在的我也并不希望我能够通过中考就进入理特班。如果说我这次碰巧入围了，那么势必会给我带来“我不需要怎么努力也可以很优秀”的不良心理暗示，对于其他真正努力的同学来说也是不公平的。</p>
+
+<p>“奋斗青年”的反义词是“摆烂青年”，但并不是说这个世界上只容许这两种人的存在。一个观点如果单从字面角度进行否定话处理，那么其否命题将与之走向两个极端。这对于逻辑推理来说是好的，却不利于观点间的驳论。</p>
+
+<p>并不是说我已经完全放弃了进入理特班的念头，而是更愿意在进入一中后的一年时间内，通过自己真正的努力考入理特班。</p>]]></content><author><name>Lyccrius</name></author><category term="essay" /><summary type="html"><![CDATA[“在追寻一个方向的路上，出现的绊脚石也不一定是绊脚石。可能它只是想让你停下来思考你是否在正确的道路上。”——uncle-lu]]></summary></entry><entry><title type="html">我在想</title><link href="http://localhost:4000/essay/wo-zai-xiang.html" rel="alternate" type="text/html" title="我在想" /><published>2022-04-21T00:00:00+08:00</published><updated>2022-04-21T00:00:00+08:00</updated><id>http://localhost:4000/essay/wo-zai-xiang</id><content type="html" xml:base="http://localhost:4000/essay/wo-zai-xiang.html"><![CDATA[<p>我在想语文还有半个单元文言文注解没背，作文的新素材也没有找好。数学最近是不是有点小退步，计算还是不太仔细，圆和二次函数应用题的掌握还有没有问题，怎么办学霸前桌又在把我往死里卷惨绝人寰不留余地。英语听写还没背糟糕，八年级英语单词还有一部分不会拼。物理化学听说下周考试，实验探究又要一分分的扣。还有政治历史，能不能再多空一些时间出来学，能不能再努力一点。</p>
 
 <p>今天也有在好好学习天天向上吗？</p>
 
