@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-24T20:48:27+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-24T20:52:04+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
 </subtitle><author><name>Lyccrius</name></author><entry><title type="html">AcWing 89. a^b</title><link href="http://localhost:4000/solution/acwing/89.html" rel="alternate" type="text/html" title="AcWing 89. a^b" /><published>2022-07-24T00:00:00+08:00</published><updated>2022-07-24T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/89</id><content type="html" xml:base="http://localhost:4000/solution/acwing/89.html"><![CDATA[<blockquote>
   <p>题目链接：<a href="https://www.acwing.com/problem/content/91/">89. a^b -AcWing题库</a></p>
 </blockquote>
 
 <p>如果 $b$ 在二进制表示下有 $k$ 位，其中第 $i(0\le i&lt;k)$ 位的数字是 $c_i$ ，那么：</p>
 <blockquote>
-  <p>$b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+…+c_{0}2^{0}$</p>
+\[b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+…+c_{0}2^{0}\]
 </blockquote>
 
 <p>于是：</p>
@@ -16,7 +16,7 @@
 <p>因为 $k=\lceil{log_2(b+1)}\rceil$ ，所以上式乘积项的数量不多于 $\lceil{log_2(b+1)}\rceil$ 个。<br />
 又因为：</p>
 <blockquote>
-  <p>$a^{2^i}=(a^{2^{i-1}})^2$</p>
+\[a^{2^i}=(a^{2^{i-1}})^2\]
 </blockquote>
 
 <p>所以很容易通过 $k$ 次递推求出每个乘积项，当 $c_i=1$ 时，把该乘积项累积到答案中。</p>
