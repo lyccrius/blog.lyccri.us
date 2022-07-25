@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-25T12:16:17+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-25T12:32:07+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
 </subtitle><author><name>Lyccrius</name></author><entry><title type="html">AcWing 89. a^b</title><link href="http://localhost:4000/solution/acwing/89.html" rel="alternate" type="text/html" title="AcWing 89. a^b" /><published>2022-07-24T00:00:00+08:00</published><updated>2022-07-24T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/89</id><content type="html" xml:base="http://localhost:4000/solution/acwing/89.html"><![CDATA[<blockquote>
   <p>题目链接：<a href="https://www.acwing.com/problem/content/91/" target="_blank">89. a^b - AcWing题库</a></p>
 </blockquote>
@@ -41,7 +41,7 @@
 <p>整个算法的时间复杂度位 \(O(log_2b)\)。</p>
 
 <blockquote>
-  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/91/a%5Eb.cpp" target="_blank">a^b.cpp</a></p>
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/91/a^b.cpp" target="_blank">a^b.cpp</a></p>
 </blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：89. a^b - AcWing题库]]></summary></entry><entry><title type="html">Acwing 90. 64位整数乘法</title><link href="http://localhost:4000/solution/acwing/90.html" rel="alternate" type="text/html" title="Acwing 90. 64位整数乘法" /><published>2022-07-24T00:00:00+08:00</published><updated>2022-07-24T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/90</id><content type="html" xml:base="http://localhost:4000/solution/acwing/90.html"><![CDATA[<blockquote>
   <p>题目链接：<a href="https://www.acwing.com/problem/content/92/" target="_blank">90. 64位整数乘法 - AcWing题库</a></p>
 </blockquote>
@@ -99,22 +99,22 @@
 
 <blockquote>
   <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/92/64位整数乘法2.cpp" target="_blank">64位整数乘法2.cpp</a></p>
-</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：90. 64位整数乘法 - AcWing题库]]></summary></entry><entry><title type="html">《算法竞赛进阶指南》0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x01 位运算" /><published>2022-07-22T10:16:56+08:00</published><updated>2022-07-22T10:16:56+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x代表16进制<br />
-0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。<br />
-8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。</p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：90. 64位整数乘法 - AcWing题库]]></summary></entry><entry><title type="html">《算法竞赛进阶指南》0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x01 位运算" /><published>2022-07-22T10:16:56+08:00</published><updated>2022-07-22T10:16:56+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x 代表 16 进制<br />
+0x00~0xFF 是以最高位二进制位为正负符号位的“补码”形式表示的 8 位二进制数。<br />
+8 位二进制数对应 char 类型，范围为 -128~127，其中 0xFF 代表 -1，0x7F 代表最大值 127。</p>
 
 <h2 id="补码">补码</h2>
-<h3 id="32位无符号整数-unsigned-int">32位无符号整数 unsigned int：</h3>
-<p>直接把这32位编码C看作32位二进制数n。</p>
-<h3 id="32位有符号整数-int">32位有符号整数 int：</h3>
-<p>以最高位为符号位，0表示非负数，1表示负数。<br />
-对于最高位为0的每种编码C，直接看作32位二进制数S。<br />
-同时，定义该编码按位取反后得到的编码~C表示的数值为-1-S。<br />
-在补码下每个数值都有唯一的表示方式，并且任意两个数值做加减法运算，都等价于在32为补码下做<strong>最高位不进位</strong>的二进制加减法运算。</p>
+<h3 id="32-位无符号整数-unsigned-int">32 位无符号整数 unsigned int：</h3>
+<p>直接把这 32 位编码 \(C\) 看作 32 位二进制数 \(N\)。</p>
+<h3 id="32-位有符号整数-int">32 位有符号整数 int：</h3>
+<p>以最高位为符号位，0 表示非负数，1 表示负数。<br />
+对于最高位为0的每种编码 \(C\)，直接看作 32 位二进制数 \(S\)。<br />
+同时，定义该编码按位取反后得到的编码 \(~C\) 表示的数值为 \(-1-S\)。<br />
+在补码下每个数值都有唯一的表示方式，并且任意两个数值做加减法运算，都等价于在 32 为补码下做<strong>最高位不进位</strong>的二进制加减法运算。</p>
 <blockquote>
   <p>正数：原码=反码=补码<br />
 负数：反码=原码除符号位取反；补码=反码+1<br />
-个人理解：负数补码的符号位相当于<code class="language-plaintext highlighter-rouge">-2147483648</code>，其余位与正数表示数值相同。</p>
+个人理解：负数补码的符号位相当于 <code class="language-plaintext highlighter-rouge">-2147483648</code>，其余位与正数表示数值相同。</p>
 </blockquote>
 
 <h4 id="0x3f-3f-3f-3f">0x3F 3F 3F 3F</h4>
@@ -126,32 +126,48 @@
 
 <h4 id="memset">memset</h4>
 <p><code class="language-plaintext highlighter-rouge">memset(a, val, sizeof(a));</code><br />
-把数值 val(0x00~0xFF) 填充到数组a的每个字节上。<br />
-1个int占用4个字节，所以只能赋值出“每8位都相同”的int。<br />
+把数值 \(val\)(0x00~0xFF) 填充到数组a的每个字节上。<br />
+1 个 int 占用 4 个字节，所以只能赋值出“每 8 位都相同”的int。<br />
 综上所述，0x7F 7F 7F 7F 是能初始化出的最大数值。<br />
-把数值初始化成正无穷时，为避免加法算数上溢或繁琐的判断，用<code class="language-plaintext highlighter-rouge">memset(a, 0x3f, sizeof(a))</code>来代替。</p>
+把数值初始化成正无穷时，为避免加法算数上溢或繁琐的判断，用 <code class="language-plaintext highlighter-rouge">memset(a, 0x3f, sizeof(a))</code> 来代替。</p>
 
 <h2 id="移位运算">移位运算</h2>
 
 <h3 id="左移">左移</h3>
-<p>在二进制表示下把数字同时向左移动，低位以0填充，高位越界后舍弃。</p>
+<p>在二进制表示下把数字同时向左移动，低位以 0 填充，高位越界后舍弃。</p>
 <blockquote>
-  <p>1 « n = $2^n$, n « 1 = 2n</p>
+\[1 &lt;&lt; n = 2^n, n &lt;&lt; 1 = 2n\]
 </blockquote>
 
 <h3 id="算数右移">算数右移</h3>
 <p>在二进制补码表示下把数字同时向右移动，高位以符号位填充，低位越界后舍弃。</p>
 <blockquote>
-  <p>n » 1 = $\lfloor {n \over 2.0} \rfloor$</p>
+\[n &gt;&gt; 1 = \lfloor {n \over 2.0} \rfloor\]
 </blockquote>
 
-<p>算数右移等于除以2向下取整，(-3) » 2 = -2，3 » 1 = 1。<br />
-“整数/2”在C++中实现为“除以2向零取整”，(-3) / 2 = -1，3 / 2 = 1。</p>
+<ul>
+  <li>算数右移等于除以 2 向下取整.
+    <blockquote>
+      <p>\((-3) &gt;&gt; 2 = -2，3 &gt;&gt; 1 = 1\)。</p>
+    </blockquote>
+  </li>
+  <li>“整数/2”在C++中实现为“除以2向零取整”。
+    <blockquote>
+      <p>\((-3) / 2 = -1，3 / 2 = 1\)。</p>
+    </blockquote>
+  </li>
+</ul>
 
 <h3 id="逻辑右移">逻辑右移</h3>
-<p>在二进制位补码表示下把数字同时向右移动，高位以0填充，低位越界后舍弃。<br />
-一般编译器均使用算数右移。<br />
-默认右移操作采用算数右移。</p>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x代表16进制 0x00~0xFF是以最高位二进制位为正负符号位的“补码”形式表示的8位二进制数。 8位二进制数对应char类型，范围为-128~127，其中0xFF代表-1，0x7F代表最大值127。]]></summary></entry><entry><title type="html">AcWing 算法基础课 二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="AcWing 算法基础课 二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
+<p>在二进制位补码表示下把数字同时向右移动，高位以0填充，低位越界后舍弃。</p>
+<ul>
+  <li>一般编译器均使用算数右移。</li>
+  <li>默认右移操作采用算数右移。</li>
+</ul>
+
+<h3 id="例题ab"><a href="https://lyccrius.github.io/solution/acwing/89.html" target="_blank">【例题】a^b</a></h3>
+
+<h3 id="例题-64位整数乘法"><a href="https://lyccrius.github.io/solution/acwing/90.html" target="_blank">【例题】 64位整数乘法</a></h3>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x 代表 16 进制 0x00~0xFF 是以最高位二进制位为正负符号位的“补码”形式表示的 8 位二进制数。 8 位二进制数对应 char 类型，范围为 -128~127，其中 0xFF 代表 -1，0x7F 代表最大值 127。]]></summary></entry><entry><title type="html">AcWing 算法基础课 二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="AcWing 算法基础课 二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
   <p>7月14号老师布置任务让15号讲二分<br />
 7月15号返校听填报志愿指导没讲成<br />
 7月16号组织了场内部比赛又没讲成<br />
