@@ -84,7 +84,9 @@ blockquote {
   border: thin solid black;
   padding: 1rem;
 
-  p { margin: 1; }
+  p {
+    margin: 1;
+  }
   pre {
     white-space: pre-wrap;
     word-wrap: break-word;
