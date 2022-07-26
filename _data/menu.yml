@@ -60,6 +60,21 @@ entries:
       show_more: true
       show_more_text: See more posts...
       show_more_url: solution
+    entries:
+    - title: acwing
+      post_list:
+        limit: 0
+        category: acwing
+        show_more: true
+        show_more_text: See more posts...
+        show_more_url: solution/acwing
+    - title: poj
+      post_list:
+        limit: 0
+        category: poj
+        show_more: true
+        show_more_text: See more posts...
+        show_more_url: solution/poj
 
   - title: essay
     post_list:
