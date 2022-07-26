@@ -1,107 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-25T23:32:26+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
-</subtitle><author><name>Lyccrius</name></author><entry><title type="html">AcWing 89. a^b</title><link href="http://localhost:4000/solution/acwing/89.html" rel="alternate" type="text/html" title="AcWing 89. a^b" /><published>2022-07-25T00:00:00+08:00</published><updated>2022-07-25T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/89</id><content type="html" xml:base="http://localhost:4000/solution/acwing/89.html"><![CDATA[<blockquote>
-  <p>题目链接：<a href="https://www.acwing.com/problem/content/91/" target="_blank">89. a^b - AcWing题库</a></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-26T15:08:44+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+</subtitle><author><name>Lyccrius</name></author><entry><title type="html">Acwing 998. 起床困难综合症</title><link href="http://localhost:4000/solution/acwing/998.html" rel="alternate" type="text/html" title="Acwing 998. 起床困难综合症" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/998</id><content type="html" xml:base="http://localhost:4000/solution/acwing/998.html"><![CDATA[<blockquote>
+  <p>题目链接：<a href="https://www.acwing.com/problem/content/1000/" target="_blank">998. 起床困难综合症</a></p>
 </blockquote>
 
-<p>如果 \(b\) 在二进制表示下有 \(k\) 位，其中第 \(i(0\le i&lt;k)\) 位的数字是 \(c_i\) ，那么：</p>
+<p>本题让我们选择 \([0,m]\) 之间的一个整数 \(x_0\)，经过给定的 \(n\) 次位运算，使结果 \(ans\) 最大。</p>
+
+<p>位运算的主要特点之一是<strong>在二进制表示下不进位</strong>。</p>
+
+<p>正因如此，在 \(x_0\) 可以任意选择的情况下，参与位运算的各个位（bit）之间是独立无关的。</p>
+
+<p>换言之，对于任意的 \(k(0\le k&lt;30)\)，“\(ans\) 的第 \(k\) 位是几” 只与 “\(x_0\) 的第 \(k\) 位是几” 有关，与其他位无关。</p>
+
+<p>所以我们可以从高位到地位，依次考虑 \(x_0\) 的每一位填 \(0\) 还是填 \(1\)。</p>
+
+<p>\(x_0\) 的第 \(k\) 位应该填 \(1\)，当且仅当同时满足下列两个条件。</p>
+<ol>
+  <li>已经填好的更高位构成的数值加上 \(1&lt;&lt;k\) 以后不超过 \(m\)。</li>
+  <li>用每个参数的第 \(k\) 位参与位运算。若初值为 \(1\)，则 \(n\) 次位运算后结果位 \(1\)；若初值为 \(0\)，则 \(n\) 次位运算后结果为 \(0\)。</li>
+</ol>
+
+<p>如果不满足上述条件，要么填 \(1\) 会超过 \($m\) 的范围，要么填 \(1\) 不如 \(0\) 更优。</p>
+
+<p>这种情况下令 \(x_0\) 的第 \(k\) 位为 \(0\) 显然更好。</p>
+
+<p>确定 \(x_0\) 的每一位以后，自然可以得到 \(ans\) 的值。</p>
+
 <blockquote>
-\[b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+…+c_{0}2^{0}\]
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/998/起床困难综合症.cpp" target="_blank">起床困难综合症.cpp</a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：998. 起床困难综合症]]></summary></entry><entry><title type="html">Acwing 91. 最短Hamilton路径</title><link href="http://localhost:4000/solution/acwing/91.html" rel="alternate" type="text/html" title="Acwing 91. 最短Hamilton路径" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/91</id><content type="html" xml:base="http://localhost:4000/solution/acwing/91.html"><![CDATA[<blockquote>
+  <p>题目链接：<a href="https://www.acwing.com/problem/content/93/" target="_blank">91. 最短Hamiltion路径 - AcWing题库</a></p>
 </blockquote>
 
-<p>于是：</p>
-<blockquote>
-\[{a^b}=a^{c_{k-1}*2^{k-1}}*a^{c_{k-1}*2^{k-1}}*…*a^{c_0*2^0}\]
-</blockquote>
+<p>枚举 \(n\) 个点的全排列，计算路径长度取最小值，时间复杂度位 \(O(n*n!)\)。</p>
 
-<p>因为 \(k=\lceil{log_2(b+1)}\rceil\) ，所以上式乘积项的数量不多于 \(\lceil{log_2(b+1)}\rceil\) 个。</p>
+<p>使用二进制状态压缩 DP 可以优化到 \(O(n^2*2^n)\)。</p>
 
-<p>又因为：</p>
-<blockquote>
-\[a^{2^i}=(a^{2^{i-1}})^2\]
-</blockquote>
+<p>在任意时刻如何表示哪些点已经被经过，那些点没有被经过？</p>
 
-<p>所以很容易通过 \(k\) 次递推求出每个乘积项，当 \(c_i=1\) 时，把该乘积项累积到答案中。</p>
-<ul>
-  <li>\(b\&amp;1\) 运算可以取出 \(b\) 在二进制表示下的最低位</li>
-  <li>\(b&gt;&gt;1\) 运算可以舍去最低位</li>
-</ul>
+<p>可以用一个 \(n\) 位二进制数，若其第 \(i\) 位 \((0\le i&lt;n)\) 为 \(1\)，则表示第 \(i\) 个点已经被经过，反之未被经过。</p>
 
-<p>在递推的过程中将二者结合，就可以遍历 \(b\) 在二进制表示下的所有数位 \(c_i\) 。</p>
+<p>在任意时刻还需要知道当前所处的位置，因此我们可以使用 \(F[i,j](0\le i&lt;2^n,0\le j&lt;n)\) 表示 “点被经过的状态” 对应的二进制数为 \(i\)，且目前处于点 \(j\) 时的最短路径。</p>
 
-<p>在循环到 \(i\) 次时，变量 \(a\) 中存储的是 \(a^{2^i}\)，若 \(b\) 该位为 1，则把此时的变量 \(a\) 累计到答案 ans 中。</p>
+<p>在起点时，有 \(F[1,0]=0\)，即只经过了点 \(0\) (\(i\)只有第 \(0\) 位为 \(1\))，目前处于起点 \(0\)，最短路长度为 \(0\)。</p>
 
-<p>在C++语言中，两个数值执行算数运算时，以参与运算的最高数值类型为基准，与保存结果的变量类型无关。</p>
+<p>为了方便起见，我们将 \(F\) 数组其他的值设为无穷大。</p>
 
-<p>虽然两个 32 位整数的乘积可能超过 int 类型的表示范围，但是 CPU 只会用 1 个 32 位寄存器保存结果，造成越界现象。</p>
+<p>目标是 \(F[(1&lt;&lt;n)-1,n-1]\)，即经过所有点 (\(i\) 的所有为都是 \(1\))，处于重点 \(n-1\) 的最短路。</p>
 
-<p>因此，我们必须把<strong>其中一个数强制转换成 64 位整数类型 long long</strong>参与运算，从而得到正确的结果。</p>
+<p>在任意时刻，有 \(F[i,j]=min\{F[i\oplus(1&lt;&lt;j),k]+weight(k,j)\}\)，其中 \(0\le j&lt;n\) 并且 \(((i&gt;&gt;j)\&amp;1)=1\)，即当前时刻 “被经过的点的状态” 对应的二进制数的第 \(j\) 位应该赋值为 \(0\)，也就是 \(i\oplus(i&lt;&lt;j)\)。</p>
 
-<p>最终对 \(p\) 取模以后，执行赋值操作时，该记过会被隐式转换成 int 存回 ans 中。</p>
-
-<p>整个算法的时间复杂度位 \(O(log_2b)\)。</p>
+<p>另外，上一时刻所处的位置可能是 \(i\oplus(1&lt;&lt;j)\)中任意一个是 \(1\) 的数位 \(k\)，从 \(k\) 走到 \(j\) 需经过 \(weight(k,j)\) 的路程，可以考虑所有这样的 \(k\) 取最小值。</p>
 
 <blockquote>
-  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/91/a^b.cpp" target="_blank">a^b.cpp</a></p>
-</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：89. a^b - AcWing题库]]></summary></entry><entry><title type="html">Acwing 90. 64位整数乘法</title><link href="http://localhost:4000/solution/acwing/90.html" rel="alternate" type="text/html" title="Acwing 90. 64位整数乘法" /><published>2022-07-25T00:00:00+08:00</published><updated>2022-07-25T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/90</id><content type="html" xml:base="http://localhost:4000/solution/acwing/90.html"><![CDATA[<blockquote>
-  <p>题目链接：<a href="https://www.acwing.com/problem/content/92/" target="_blank">90. 64位整数乘法 - AcWing题库</a></p>
-</blockquote>
-
-<p>因为 C++ 内置的最高整数类型是 64 位，若运算 \(a * b \mod p\) 中的三个变量 \(a,b,p\) 都在 \(10^{18}\) 级别，则不存在一个可供强制转换的 128 位整数类型，我们需要一些特殊的处理办法。</p>
-
-<h2 id="方法一">方法一</h2>
-<p>类似于快速幂的思想，把整数 \(b\) 用二进制表示，即</p>
-<blockquote>
-\[b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+\cdots+c_02^0\]
-</blockquote>
-
-<p>那么</p>
-<blockquote>
-\[a*b=c_{k-1}*a*2^{k-1}+c_{k-2}*a*2^{k-2}+\cdots+c_0*a*2^0\]
-</blockquote>
-
-<p>因为</p>
-<blockquote>
-\[a*2^i=(a*2^{i-1})*2\]
-</blockquote>
-
-<p>若已求出 \({a*2^i-1\mod p}\) ，则计算 \((a*2^{i-1})*2\mod a\) 时，运算过程中每一步的结果都不超过 \(2*10^{18}\)，仍在64位整数 long long 的表示范围内，所以很容易通过 \(k\) 次地推求出每个乘积项。</p>
-
-<p>当 \(c_i=1\) 时，把该乘积项累计加到答案中即可。</p>
-
-<p>时间复杂度为 \(O(log_2b)\)。</p>
-
-<blockquote>
-  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/92/64位整数乘法1.cpp" target="_blank">64位整数乘法1.cpp</a></p>
-</blockquote>
-
-<h2 id="方法二">方法二</h2>
-<p>利用 \(a*b\mod p=a*b-\lfloor a*b/p\rfloor *p\)，记 \(c=\lfloor a*b/p\rfloor\)。</p>
-
-<p>若用浮点数直接计算 \(a*b/p\)，当浮点数的精度不足以保存精确数值时，它会舍去地位，所以得到的结果是 \(c.\_\_\_\)，其中小数点之后的部分是不准确的。</p>
-
-<p>long double 在十进制下的有效数字有 18~19 位。</p>
-
-<p>当 \(a,b&lt;p\) 时，\(c\) 一定也小于 \(p\)，即 \(c\) 在 18 位以内。</p>
-
-<p>故 long double 足够胜任保存整数部分的精确值 \(c\)。</p>
-
-<p>再把结果强制转化为 unsigned long long 类型，即可得到整数 \(c\)。</p>
-
-<p>当 \(a*b\) 恰好能被 \(p\) 整除时，由于精度误差，算出的 \(c\) 可能比实际小 \(1\)，但这在取模一一下并不影响结果的正确性。<del>这一段只要知道有这么回事就可以了，不要去管它具体为什么是这样，这样就是这样，反正这个阶段学也学不懂浪费时间（bushi）（逃）</del></p>
-
-<p>再算出 \(a*b-c*p\)。</p>
-
-<p>因为 \(a*b-c*p\) 实际上是 \(a*b\mod p\)，所以 \(a*b-c*p\le p&lt;2^{64}\)，进而 \(a*b-c*p=(a*b-c*p)\mod 2^{64}\)。</p>
-
-<p>因为 unsigned long long 自然溢出等价于对 \(2^{64}\) 取模，所以我们用 unsigned long long 计算 \(x=a*b\) 和 \(y=c*p\)，再用 long long 计算 \((x\mod p-y\mod p)\mod p\)，即可得到最终的结果。</p>
-
-<p>时间复杂度为 \(O(1)\)。</p>
-
-<blockquote>
-  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/92/64位整数乘法2.cpp" target="_blank">64位整数乘法2.cpp</a></p>
-</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：90. 64位整数乘法 - AcWing题库]]></summary></entry><entry><title type="html">《算法竞赛进阶指南》0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x01 位运算" /><published>2022-07-22T00:00:00+08:00</published><updated>2022-07-22T00:00:00+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x 代表 16 进制。<br />
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/93/最短Hamilton路径.cpp" target="_blank">最短Hamiltion路径.cpp<a></a></a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：91. 最短Hamiltion路径 - AcWing题库]]></summary></entry><entry><title type="html">《算法竞赛进阶指南》0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x01 位运算" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x 代表 16 进制。<br />
 0x00~0xFF 是以最高位二进制位为正负符号位的“补码”形式表示的 8 位二进制数。<br />
-8 位二进制数对应 char 类型，范围为 -128~127，其中 0xFF 代表 -1，0x7F 代表最大值 127。</p>
+8 位二进制数对应 char 类型，范围为 -128~127。
+其中 0xFF 代表 -1，0x7F 代表最大值 127。</p>
 
 <h2 id="补码">补码</h2>
 <h3 id="32-位无符号整数-unsigned-int">32 位无符号整数 unsigned int：</h3>
@@ -168,9 +123,11 @@
   <li>默认右移操作采用算数右移。</li>
 </ul>
 
-<h3 id="例题ab"><a href="https://lyccrius.github.io/solution/acwing/89.html" target="_blank">【例题】a^b</a></h3>
+<h3 id="例题ab">【例题】<a href="https://lyccrius.github.io/solution/acwing/89.html" target="_blank">a^b</a></h3>
 
-<h3 id="例题-64位整数乘法"><a href="https://lyccrius.github.io/solution/acwing/90.html" target="_blank">【例题】 64位整数乘法</a></h3>
+<h4 id="相关题目raising-module-numbers">相关题目：<a href="https://lyccrius.github.io/solution/poj/1995.html" target="_blank">Raising Module Numbers</a></h4>
+
+<h3 id="例题-64位整数乘法">【例题】 <a href="https://lyccrius.github.io/solution/acwing/90.html" target="_blank">64位整数乘法</a></h3>
 
 <h2 id="二进制状态压缩">二进制状态压缩</h2>
 <p>将一个长度为 \(m\) 的 bool 数组用一个 \(m\) 位二进制整数表示并存储。</p>
@@ -193,10 +150,164 @@
     </tr>
     <tr>
       <td style="text-align: left">把整数 \(n\) 在二进制表示下的第 \(k\) 位取反</td>
-      <td style="text-align: left">\(n\ xor (1 &lt;&lt; k)\)</td>
+      <td style="text-align: left">\(n\oplus(1 &lt;&lt; k)\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">对整数 \(n\) 在二进制表示下的第 \(k\) 位赋值 \(1\)</td>
+      <td style="text-align: left">\(n\) | \((1&lt;&lt;k)\)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">对整数 \(n\) 在二进制表示下的第 \(k\) 位赋值 \(0\)</td>
+      <td style="text-align: left">\(n\&amp;(～(1&lt;&lt;k))\)</td>
     </tr>
   </tbody>
-</table>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x 代表 16 进制。 0x00~0xFF 是以最高位二进制位为正负符号位的“补码”形式表示的 8 位二进制数。 8 位二进制数对应 char 类型，范围为 -128~127，其中 0xFF 代表 -1，0x7F 代表最大值 127。]]></summary></entry><entry><title type="html">AcWing 算法基础课 二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="AcWing 算法基础课 二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
+</table>
+
+<h3 id="例题最短hamilton路径">【例题】<a href="https://lyccrius.github.io/solution/acwing/91.html" target="_blank">最短Hamilton路径</a></h3>
+
+<h3 id="例题起床困难综合症">【例题】<a href="https://lyccrius.github.io/solution/acwing/998.html" target="_blank">起床困难综合症</a></h3>
+
+<h2 id="成对转换">成对转换</h2>
+<p>通过计算可以发现，对于非负整数 \(n\)：</p>
+<ul>
+  <li>当 \(n\) 为偶数时，\(n\oplus 1=n+1\)。</li>
+  <li>当 \(n\) 为奇数时，\(n\oplus 1=n-1\)。</li>
+</ul>
+
+<p>因此，“0 与 1” “2 与 3” “4 与 5” \(\cdots\) 关于 \(\oplus 1\) 运算构成 “成对转换”。</p>
+
+<p>在具有无向边（双向边）当图中把一对正反方向的边分别存储在邻接表数组的第 \(n\) 与 \(n+1\) 位置（其中 \(n\) 为偶数），就可以通过 \(\oplus 1\) 的运算获取与当前边 \((x,y)\) 反向当边 \((y,x)\) 的存储位置。</p>
+
+<h2 id="lowbit-运算">lowbit 运算</h2>
+<p>lowbit(\(n\)) 定义为非负整数 \(n\) 在二进制表示下“最低位的 \(1\) 及其后边所有的 \(0\)”构成的数值。</p>
+
+<p>设 \(n&gt;0\)，\(n\) 的第 \(k\) 位是 \(1\)，第 \(0～k-1\) 位都是 \(0\)。</p>
+
+<p>为了实现 lowbit 运算，先把 \(n\) 取反，此时第 \(k\) 位变为 \(0\)，第 \(0～k-1\) 位都是 \(1\)。再令 \(n=n+1\)，此时因为进位，第 \(k\) 位变为 \(1\)，第 \(0～k-1\) 位都是 \(0\)。</p>
+
+<p>在上面的取反加 \(1\) 操作后，\(n\) 的第 \(k+1\) 到最高位恰好与原来相反，所以 \(n\&amp;(～n+1)\) 仅有第 \(k\) 位为 \(1\)，其余为都是 \(0\)。</p>
+
+<p>而在补码表示下，\(～n=-1-n\)，因此：</p>
+<blockquote>
+  <p>lowbit\((n)=n\&amp;(～n+1)=n\&amp;(-n)\)</p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x 代表 16 进制。 0x00~0xFF 是以最高位二进制位为正负符号位的“补码”形式表示的 8 位二进制数。 8 位二进制数对应 char 类型，范围为 -128~127。 其中 0xFF 代表 -1，0x7F 代表最大值 127。]]></summary></entry><entry><title type="html">POJ 1995 Raising Module Numbers</title><link href="http://localhost:4000/solution/poj/1995.html" rel="alternate" type="text/html" title="POJ 1995 Raising Module Numbers" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/solution/poj/1995</id><content type="html" xml:base="http://localhost:4000/solution/poj/1995.html"><![CDATA[<blockquote>
+  <p>题目链接：<a href="http://poj.org/problem?id=1995" target="_blank">1995 – Raising Module Numbers</a></p>
+</blockquote>
+
+<blockquote>
+  <p>第一行有一个整数 \(Z\)，表示 \(Z\) 组数据。<br />
+在每组数据中，第一行有一个整数 \(M\)，第二行有一个整数 \(H\)。<br />
+接下来 \(H\) 行，每行有两个整数 \(A_i,B_i\) (\(1\le i\le H\))。<br />
+求 \((A_1^{B_1}+A_2^{B_2}+\cdots+A_H^{B_H})\mod M\)。</p>
+</blockquote>
+
+<p>本题套用快速幂模版 (<a href="https://lyccrius.github.io/solution/acwing/89.html" target="_blank">AcWing 89. a^b</a>)。</p>
+
+<p>在每组数据中：每读入一组 \(A_i,B_i\)，计算一次 \(A_i^{B_i}\)，累积到 \(ans\) 中并取模，最后输出 \(ans\)。</p>
+
+<blockquote>
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/poj.org/problem%3Fid=1995/Raising%20Modulo%20Numbers.cpp" target="_blank">Raising Modulo Numbers.cpp</a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="poj" /><summary type="html"><![CDATA[题目链接：1995 – Raising Module Numbers]]></summary></entry><entry><title type="html">Acwing 90. 64位整数乘法</title><link href="http://localhost:4000/solution/acwing/90.html" rel="alternate" type="text/html" title="Acwing 90. 64位整数乘法" /><published>2022-07-25T00:00:00+08:00</published><updated>2022-07-25T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/90</id><content type="html" xml:base="http://localhost:4000/solution/acwing/90.html"><![CDATA[<blockquote>
+  <p>题目链接：<a href="https://www.acwing.com/problem/content/92/" target="_blank">90. 64位整数乘法 - AcWing题库</a></p>
+</blockquote>
+
+<p>因为 C++ 内置的最高整数类型是 64 位，若运算 \(a * b \mod p\) 中的三个变量 \(a,b,p\) 都在 \(10^{18}\) 级别，则不存在一个可供强制转换的 128 位整数类型，我们需要一些特殊的处理办法。</p>
+
+<h2 id="方法一">方法一</h2>
+<p>类似于快速幂的思想，把整数 \(b\) 用二进制表示，即</p>
+<blockquote>
+\[b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+\cdots+c_02^0\]
+</blockquote>
+
+<p>那么</p>
+<blockquote>
+\[a*b=c_{k-1}*a*2^{k-1}+c_{k-2}*a*2^{k-2}+\cdots+c_0*a*2^0\]
+</blockquote>
+
+<p>因为</p>
+<blockquote>
+\[a*2^i=(a*2^{i-1})*2\]
+</blockquote>
+
+<p>若已求出 \({a*2^i-1\mod p}\) ，则计算 \((a*2^{i-1})*2\mod a\) 时，运算过程中每一步的结果都不超过 \(2*10^{18}\)，仍在64位整数 long long 的表示范围内，所以很容易通过 \(k\) 次地推求出每个乘积项。</p>
+
+<p>当 \(c_i=1\) 时，把该乘积项累计加到答案中即可。</p>
+
+<p>时间复杂度为 \(O(log_2b)\)。</p>
+
+<blockquote>
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/92/64位整数乘法1.cpp" target="_blank">64位整数乘法1.cpp</a></p>
+</blockquote>
+
+<h2 id="方法二">方法二</h2>
+<p>利用 \(a*b\mod p=a*b-\lfloor a*b/p\rfloor *p\)，记 \(c=\lfloor a*b/p\rfloor\)。</p>
+
+<p>若用浮点数直接计算 \(a*b/p\)，当浮点数的精度不足以保存精确数值时，它会舍去地位，所以得到的结果是 \(c.\_\_\_\)，其中小数点之后的部分是不准确的。</p>
+
+<p>long double 在十进制下的有效数字有 18~19 位。</p>
+
+<p>当 \(a,b&lt;p\) 时，\(c\) 一定也小于 \(p\)，即 \(c\) 在 18 位以内。</p>
+
+<p>故 long double 足够胜任保存整数部分的精确值 \(c\)。</p>
+
+<p>再把结果强制转化为 unsigned long long 类型，即可得到整数 \(c\)。</p>
+
+<p>当 \(a*b\) 恰好能被 \(p\) 整除时，由于精度误差，算出的 \(c\) 可能比实际小 \(1\)，但这在取模一一下并不影响结果的正确性。<del>这一段只要知道有这么回事就可以了，不要去管它具体为什么是这样，这样就是这样，反正这个阶段学也学不懂浪费时间（bushi）（逃）</del></p>
+
+<p>再算出 \(a*b-c*p\)。</p>
+
+<p>因为 \(a*b-c*p\) 实际上是 \(a*b\mod p\)，所以 \(a*b-c*p\le p&lt;2^{64}\)，进而 \(a*b-c*p=(a*b-c*p)\mod 2^{64}\)。</p>
+
+<p>因为 unsigned long long 自然溢出等价于对 \(2^{64}\) 取模，所以我们用 unsigned long long 计算 \(x=a*b\) 和 \(y=c*p\)，再用 long long 计算 \((x\mod p-y\mod p)\mod p\)，即可得到最终的结果。</p>
+
+<p>时间复杂度为 \(O(1)\)。</p>
+
+<blockquote>
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/92/64位整数乘法2.cpp" target="_blank">64位整数乘法2.cpp</a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：90. 64位整数乘法 - AcWing题库]]></summary></entry><entry><title type="html">AcWing 89. a^b</title><link href="http://localhost:4000/solution/acwing/89.html" rel="alternate" type="text/html" title="AcWing 89. a^b" /><published>2022-07-25T00:00:00+08:00</published><updated>2022-07-25T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/89</id><content type="html" xml:base="http://localhost:4000/solution/acwing/89.html"><![CDATA[<blockquote>
+  <p>题目链接：<a href="https://www.acwing.com/problem/content/91/" target="_blank">89. a^b - AcWing题库</a></p>
+</blockquote>
+
+<p>如果 \(b\) 在二进制表示下有 \(k\) 位，其中第 \(i(0\le i&lt;k)\) 位的数字是 \(c_i\) ，那么：</p>
+<blockquote>
+\[b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+…+c_{0}2^{0}\]
+</blockquote>
+
+<p>于是：</p>
+<blockquote>
+\[{a^b}=a^{c_{k-1}*2^{k-1}}*a^{c_{k-1}*2^{k-1}}*…*a^{c_0*2^0}\]
+</blockquote>
+
+<p>因为 \(k=\lceil{log_2(b+1)}\rceil\) ，所以上式乘积项的数量不多于 \(\lceil{log_2(b+1)}\rceil\) 个。</p>
+
+<p>又因为：</p>
+<blockquote>
+\[a^{2^i}=(a^{2^{i-1}})^2\]
+</blockquote>
+
+<p>所以很容易通过 \(k\) 次递推求出每个乘积项，当 \(c_i=1\) 时，把该乘积项累积到答案中。</p>
+<ul>
+  <li>\(b\&amp;1\) 运算可以取出 \(b\) 在二进制表示下的最低位</li>
+  <li>\(b&gt;&gt;1\) 运算可以舍去最低位</li>
+</ul>
+
+<p>在递推的过程中将二者结合，就可以遍历 \(b\) 在二进制表示下的所有数位 \(c_i\) 。</p>
+
+<p>在循环到 \(i\) 次时，变量 \(a\) 中存储的是 \(a^{2^i}\)，若 \(b\) 该位为 1，则把此时的变量 \(a\) 累计到答案 ans 中。</p>
+
+<p>在C++语言中，两个数值执行算数运算时，以参与运算的最高数值类型为基准，与保存结果的变量类型无关。</p>
+
+<p>虽然两个 32 位整数的乘积可能超过 int 类型的表示范围，但是 CPU 只会用 1 个 32 位寄存器保存结果，造成越界现象。</p>
+
+<p>因此，我们必须把<strong>其中一个数强制转换成 64 位整数类型 long long</strong>参与运算，从而得到正确的结果。</p>
+
+<p>最终对 \(p\) 取模以后，执行赋值操作时，该记过会被隐式转换成 int 存回 ans 中。</p>
+
+<p>整个算法的时间复杂度位 \(O(log_2b)\)。</p>
+
+<blockquote>
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/91/a^b.cpp" target="_blank">a^b.cpp</a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：89. a^b - AcWing题库]]></summary></entry><entry><title type="html">AcWing 算法基础课 二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="AcWing 算法基础课 二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
   <p>7月14号老师布置任务让15号讲二分<br />
 7月15号返校听填报志愿指导没讲成<br />
 7月16号组织了场内部比赛又没讲成<br />
@@ -215,12 +326,12 @@
 
 <p>二分的本质实际上是根据某一性质将某一序列划分为前后两部分，并寻找这两部分的边界。</p>
 
-<p>如之前提到的二分查找，在长度为 <code class="language-plaintext highlighter-rouge">n</code> 的序列 <code class="language-plaintext highlighter-rouge">a</code> 中查找数字 <code class="language-plaintext highlighter-rouge">x</code> 首次出现的位置，实际上是将序列划分为 <code class="language-plaintext highlighter-rouge">a[i] &lt; x</code> 和 <code class="language-plaintext highlighter-rouge">a[i] &gt;= x</code> 左右两部分，并寻找 <code class="language-plaintext highlighter-rouge">a[i] &gt;= x</code> 区间的左边界。</p>
+<p>如之前提到的二分查找，在长度为 N 的序列 a 中查找数字 x 首次出现的位置，实际上是将序列划分为 a[i] &lt; x 和 a[i] &gt;= x 左右两部分，并寻找 a[i] &gt;= x 区间的左边界。</p>
 
-<p>至于判断数字x是否存在于序列a中，则可根据二分得到的边界值进行判断，即判断 <code class="language-plaintext highlighter-rouge">a[i] == x</code> 。</p>
+<p>至于判断数字x是否存在于序列a中，则可根据二分得到的边界值进行判断，即判断 a[i] == x。</p>
 
 <h1 id="模版">模版</h1>
-<p>这里粘两个 <code class="language-plaintext highlighter-rouge">yxc</code> 的二分模版</p>
+<p>这里粘两个 yxc 的二分模版</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// 区间[l, r]被划分成[l, mid]和[mid + 1, r]时使用：
 int bsearch_1(int l, int r)
@@ -247,11 +358,11 @@ int bsearch_2(int l, int r)
 }
 </code></pre></div></div>
 
-<p>讲一下第二个板子为什么 <code class="language-plaintext highlighter-rouge">mid = l + r + 1 &gt;&gt; 1</code> 要 <code class="language-plaintext highlighter-rouge">+1</code> 。</p>
+<p>讲一下第二个板子为什么 mid = l + r + 1 » 1 要 +1 。</p>
 
-<p>当 <code class="language-plaintext highlighter-rouge">l</code> 与 <code class="language-plaintext highlighter-rouge">r</code> 差值为 <code class="language-plaintext highlighter-rouge">1</code> 时，<code class="language-plaintext highlighter-rouge">mid = l + r + 1 &gt;&gt; 1</code> 后 <code class="language-plaintext highlighter-rouge">l</code> 值与 <code class="language-plaintext highlighter-rouge">mid</code> 相同。此后若 <code class="language-plaintext highlighter-rouge">check(mid)</code> 返回值为 <code class="language-plaintext highlighter-rouge">true</code> ，<code class="language-plaintext highlighter-rouge">l</code> 的值仍与 <code class="language-plaintext highlighter-rouge">mid</code> 相同，这将进入一个死循环而导致 <code class="language-plaintext highlighter-rouge">RE</code> 。故需要 <code class="language-plaintext highlighter-rouge">+ 1</code> 使得写入 <code class="language-plaintext highlighter-rouge">mid</code> 的值为 <code class="language-plaintext highlighter-rouge">r</code> 。</p>
+<p>当 l 与 r 差值为 1 时，mid = l + r + 1 » 1 后 l 值与 mid 相同。此后若 check(mid) 返回值为 true ，l 的值仍与 mid 相同，这将进入一个死循环而导致 RE 。故需要 + 1 使得写入 mid 的值为 r 。</p>
 
-<p>至于什么情况下需要 <code class="language-plaintext highlighter-rouge">+ 1</code> ，请自行理解并视情况而定。</p>
+<p>至于什么情况下需要 + 1 ，请自行理解并视情况而定。</p>
 
 <h1 id="习题及代码">习题及代码</h1>
 <blockquote>
