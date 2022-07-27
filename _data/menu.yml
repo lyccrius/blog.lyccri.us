@@ -5,15 +5,15 @@ entries:
   - title: info
     entries:
       - title: about
-        url: about
+        url: about.html
       - title: commit
-        url: commit
+        url: commit.html
       - title: rss
         url: feed.xml
       - title: contact
         url: mailto:lyccrius@outlook.com
       - title: friend-link
-        url: friend-link
+        url: friend-link.html
       - title: github repo
         url: https://github.com/lyccrius/lyccrius.github.io
         entries:
@@ -41,7 +41,7 @@ entries:
               category: jjzn
               show_more: true
               show_more_text: See more posts...
-              show_more_url: course/sfjs/jjzn
+              show_more_url: course/sfjs/jjzn.html
 
   - title: note
     entries:
@@ -51,7 +51,7 @@ entries:
           category: oi
           show_more: true
           show_more_text: See more posts...
-          show_more_url: note/oi
+          show_more_url: note/oi.html
 
   - title: solution
     post_list:
@@ -59,7 +59,7 @@ entries:
       category: solution
       show_more: true
       show_more_text: See more posts...
-      show_more_url: solution
+      show_more_url: solution.html
     entries:
     - title: acwing
       post_list:
@@ -67,14 +67,14 @@ entries:
         category: acwing
         show_more: true
         show_more_text: See more posts...
-        show_more_url: solution/acwing
+        show_more_url: solution/acwing.html
     - title: poj
       post_list:
         limit: 0
         category: poj
         show_more: true
         show_more_text: See more posts...
-        show_more_url: solution/poj
+        show_more_url: solution/poj.html
 
   - title: essay
     post_list:
@@ -82,4 +82,4 @@ entries:
       category: essay
       show_more: true
       show_more_text: See more posts...
-      show_more_url: essay
+      show_more_url: essay.html
