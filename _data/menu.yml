@@ -31,18 +31,19 @@ entries:
   - title: course
     entries:
       - title: 算法竞赛
-        post_list:
-          limit: 0
-          category: sfjs
-          show_more: true
-          show_more_text: 算法竞赛
-          show_more_url: course/sfjs
-        post_list:
-          limit: 0
-          category: jjzn
-          show_more: true
-          show_more_text: 进阶指南
-          show_more_url: course/sfjs/jjzn
+        entries: 
+          - post_list:
+            limit: 0
+            category: sfjs
+            show_more: true
+            show_more_text: 算法竞赛
+            show_more_url: course/sfjs
+          - post_list:
+            limit: 0
+            category: jjzn
+            show_more: true
+            show_more_text: 进阶指南
+            show_more_url: course/sfjs/jjzn
       - title: AcWing
         post_list:
           limit: 0
