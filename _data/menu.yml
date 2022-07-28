@@ -34,8 +34,6 @@ entries:
         entries: 
           - title: 进阶指南
             url: course/sfjs/jjzn
-          - title: 进阶指南
-            url: course/sfjs/jjzn
       - title: AcWing
         entries:
           - title: 算法基础课
@@ -48,11 +46,12 @@ entries:
       show_more: true
       show_more_text: See more posts...
       show_more_url: solution
-    entries:
-      - title: AcWing
-        url: solution/acwing
-      - title: POJ
-        url: solution/poj
+    - title: OJ
+      entries:
+        - title: AcWing
+          url: solution/acwing
+        - title: POJ
+          url: solution/poj
 
   - title: essay
     post_list:
