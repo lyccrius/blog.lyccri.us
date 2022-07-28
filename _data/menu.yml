@@ -45,7 +45,7 @@ entries:
             show_more: true
             show_more_text: 算法基础课1
             show_more_url: course/acwing/sfjck
-          - title:
+          - title: 
             post_list:
               limit: 0
               category: sfjck
