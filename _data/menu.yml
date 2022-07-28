@@ -40,6 +40,7 @@ entries:
             show_more_url: course/sfjs/jjzn
       - title: AcWing
         entries:
+          - title:
           post_list:
             limit: 0
             category: sfjck
