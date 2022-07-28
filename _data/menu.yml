@@ -33,8 +33,6 @@ entries:
       - title: 算法竞赛
         entries:
           - title: 入门经典
-            entries:
-              - title: 算法实现
           - title: 进阶指南
             post_list:
               limit: 0
@@ -45,13 +43,15 @@ entries:
 
   - title: note
     entries:
-      - title: oi
-        post_list:
-          limit: 3
-          category: oi
-          show_more: true
-          show_more_text: See more posts...
-          show_more_url: note/oi
+      - title: AcWing
+        entries:
+          - title: 算法基础课
+            post_list:
+              limit: 0
+              category: sfjck
+              show_more: true
+              show_more_text: See more posts...
+              show_more_url: note/acwing/sfjck
 
   - title: solution
     post_list:
