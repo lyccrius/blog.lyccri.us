@@ -32,26 +32,20 @@ entries:
     entries:
       - title: 算法竞赛
         entries:
-          - title: 入门经典
-          - title: 进阶指南
-            post_list:
-              limit: 0
-              category: jjzn
-              show_more: true
-              show_more_text: See more posts...
-              show_more_url: course/sfjs/jjzn
-
-  - title: note
-    entries:
+          post_list:
+            limit: 0
+            category: jjzn
+            show_more: true
+            show_more_text: 进阶指南
+            show_more_url: course/sfjs/jjzn
       - title: AcWing
         entries:
-          - title: 算法基础课
-            post_list:
-              limit: 0
-              category: sfjck
-              show_more: true
-              show_more_text: See more posts...
-              show_more_url: note/acwing/sfjck
+          post_list:
+            limit: 0
+            category: sfjck
+            show_more: true
+            show_more_text: 算法基础课
+            show_more_url: course/acwing/sfjck
 
   - title: solution
     post_list:
@@ -61,19 +55,17 @@ entries:
       show_more_text: See more posts...
       show_more_url: solution
     entries:
-    - title: acwing
       post_list:
         limit: 0
         category: acwing
         show_more: true
-        show_more_text: See more posts...
+        show_more_text: AcWing
         show_more_url: solution/acwing
-    - title: poj
       post_list:
         limit: 0
         category: poj
         show_more: true
-        show_more_text: See more posts...
+        show_more_text: POJ
         show_more_url: solution/poj
 
   - title: essay
