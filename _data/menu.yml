@@ -39,14 +39,18 @@ entries:
             show_more_text: 进阶指南
             show_more_url: course/sfjs/jjzn
       - title: AcWing
-        entries:
-          - title:
-          post_list:
-            limit: 0
-            category: sfjck
-            show_more: true
-            show_more_text: 算法基础课
-            show_more_url: course/acwing/sfjck
+        post_list:
+          limit: 0
+          category: sfjck
+          show_more: true
+          show_more_text: 算法基础课
+          show_more_url: course/acwing/sfjck
+        post_list:
+          limit: 0
+          category: sfjck
+          show_more: true
+          show_more_text: 算法基础课
+          show_more_url: course/acwing/sfjck
 
   - title: solution
     post_list:
