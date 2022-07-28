@@ -1,5 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-26T15:08:44+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
-</subtitle><author><name>Lyccrius</name></author><entry><title type="html">Acwing 998. 起床困难综合症</title><link href="http://localhost:4000/solution/acwing/998.html" rel="alternate" type="text/html" title="Acwing 998. 起床困难综合症" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/998</id><content type="html" xml:base="http://localhost:4000/solution/acwing/998.html"><![CDATA[<blockquote>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-28T10:25:24+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Lyccrius’s Blog</title><subtitle>This is lyccrius's blog.
+</subtitle><author><name>Lyccrius</name></author><entry><title type="html">《算法竞赛进阶指南》0x02 递推与递归</title><link href="http://localhost:4000/course/sfjs/jjzn/0x02.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x02 递推与递归" /><published>2022-07-27T00:00:00+08:00</published><updated>2022-07-27T00:00:00+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x02</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x02.html"><![CDATA[<blockquote>
+  <ul>
+    <li>状态空间：一个实际问题的各种可能情况构成的集合。</li>
+    <li>程序的运行是对于状态空间的遍历。</li>
+    <li>算法和数据结构通过 <em>划分、归纳、提取、抽象</em> 来帮助提高程序遍历状态空间的效率。</li>
+  </ul>
+</blockquote>
+
+<p>递推和递归就是程序遍历状态空间的两种基本方式。</p>
+
+<h2 id="递推与递归的宏观描述">递推与递归的宏观描述</h2>
+
+<h3 id="使用递推与递归的前提">使用递推与递归的前提</h3>
+<p>对于一个待求解的问题，当它局限在某处边界、某个小范围或者某种特殊情形下时，其答案往往是一致的。</p>
+
+<p>如果能够将该答案的应用场景扩大到原问题的状态空间，并且扩展过程的每个步骤具有相似性，就可以考虑使用递推或者递归求解。</p>
+
+<p>“原问题”与“问题边界”之间的每个变换步骤具有相似性，这样我们才能够设计一段程序实现这个步骤，将其反复作用于问题之中。</p>
+
+<p>换句话说，程序在每个步骤上应该面对相同类型的问题，这些问题都是原问题的一个子问题，可能仅在规模或者某些限制条件上有所区别，并且能够使用“求解原问题的程序”进行求解。</p>
+
+<h3 id="递推与递归的区别">递推与递归的区别</h3>
+<p>以已知的 “问题边界” 为起点向 “原问题” 正向推导的拓展方式就是递推。</p>
+
+<p>然而在很多时候，推导的路线难以确定，这时以“原问题”为起点尝试寻找把状态空间缩小到已知的“问题边界”的路线，再通过该路线反向回溯的遍历方式就是递归。</p>
+
+<h3 id="递归">递归</h3>
+<p>我们可以让程序在每个变换步骤中执行三个操作。</p>
+<blockquote>
+  <ol>
+    <li>缩小问题状态空间的规模。<br />
+  这意味着程序尝试寻找在 “原问题” 与 “问题边界” 之间的变换路线，并向正在探索的路线上迈出一步。</li>
+    <li>尝试求解规模缩小以后的问题，结果可能是成功，也可能是失败。</li>
+    <li>如果成功，即找到了规模缩小后的问题的答案，那么将答案扩展到当前问题。
+  如果失败，那么重新回到当前问题，程序可能会继续寻找当前问题的其他变换路线，直至最终确定当前问题无法求解。</li>
+  </ol>
+</blockquote>
+
+<p>在以上三个操作中有两点颇为关键。</p>
+<blockquote>
+  <ol>
+    <li>“如何尝试求解规模缩小以后的问题”。因为规模缩小以后的问题是原问题的一个子问题，所以我们可以把它视为一个新的“原问题”由相同的程序进行求解，这就是所谓的“<strong>自身调用自身</strong>”。</li>
+    <li>如果求解子问题失败，程序需要重新回到当前问题去寻找其他的变换路线，因此把当前问题缩小为子问题时所做的对当前问题状态产生影响的事情应该全部失效，这就是所谓的“<strong>回溯时还原现场</strong>”。</li>
+  </ol>
+</blockquote>
+
+<p>递归程序的基本单元是由 “缩小” “求解” “扩展” 组成的一种变换步骤，只是在 “求解” 时因为问题的相似性，不断重复使用了这样一种变换步骤，直至在已知的问题边界上直接确定答案。</p>
+
+<p>对于其中任意一条从 “原问题” 到 “问题边界” 的变换路线，横向来看，它的每一层是一次递归程序体的执行；纵向来看，它的左右两边分别是寻找路线和沿其推导的流程。</p>
+
+<p>为了保证每层的 “缩小” 与 “扩展” 能够衔接在同一形式的问题上，“求解” 操作自然要保证在执行前后程序面对问题的状态是相同的，这也就是 “还原现场” 的必要性所在。</p>
+<h2 id="递推与递归的简单应用">递推与递归的简单应用</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">枚举形式</th>
+      <th style="text-align: center">状态空间规模</th>
+      <th style="text-align: center">一般遍历方式</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">多项式</td>
+      <td style="text-align: center">\(n^k,k为常数\)</td>
+      <td style="text-align: center">循环(for)、递推</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">指数</td>
+      <td style="text-align: center">\(k^n,k为常数\)</td>
+      <td style="text-align: center">递归、位运算</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">排列</td>
+      <td style="text-align: center">\(n!\)</td>
+      <td style="text-align: center">递归、C++ next_permutation</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">组合</td>
+      <td style="text-align: center">\(C_n^m\)</td>
+      <td style="text-align: center">递归+剪枝</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="例题递归实现指针型枚举">【例题】<a href="https://lyccrius.github.io/solution/acwing/92/" target="_blank">递归实现指针型枚举</a></h3>
+
+<h3 id="例题递归实现组合型枚举">【例题】<a href="https://lyccrius.github.io/solution/acwing/93/" target="_blank">递归实现组合型枚举</a></h3>
+
+<h3 id="例题递归实现排序型枚举">【例题】<a href="https://lyccrius.github.io/solution/acwing/94/" target="_blank">递归实现排序型枚举</a></h3>
+
+<h3 id="例题费解的开关">【例题】<a href="https://lyccrius.github.io/solution/acwing/95/" target="_blank">费解的开关</a></h3>
+
+<h3 id="例题strage-towers-of-hanoi">【例题】<a href="https://lyccrius.github.io/solution/acwing/96/" target="_blank">Strage Towers of Hanoi</a></h3>
+
+<h2 id="分治">分治</h2>
+
+<p>分治法把一个问题划分为若干个规模更小的同类子问题。</p>
+
+<p>对这些字问题递归求解，然后在回溯时通过他们推导出原问题的解。</p>
+
+<h3 id="例题sumdiv">【例题】<a href="https://lyccrius.github.io/solution/acwing/97/" target="_blank">Sumdiv</a></h3>
+
+<h2 id="分形">分形</h2>
+<h3 id="例题fractal-streets">【例题】<a href="https://lyccrius.github.io/solution/acwing/98/" target="_blank">Fractal Streets</a></h3>
+
+<h2 id="递归的机器实现">递归的机器实现</h2>
+<h3 id="例题非递归实现组合型枚举">【例题】<a href="https://lyccrius.github.io/solution/acwing/93/" target="_blank">非递归实现组合型枚举</a></h3>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[状态空间：一个实际问题的各种可能情况构成的集合。 程序的运行是对于状态空间的遍历。 算法和数据结构通过 划分、归纳、提取、抽象 来帮助提高程序遍历状态空间的效率。]]></summary></entry><entry><title type="html">POJ 1995 Raising Module Numbers</title><link href="http://localhost:4000/solution/poj/1995.html" rel="alternate" type="text/html" title="POJ 1995 Raising Module Numbers" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/solution/poj/1995</id><content type="html" xml:base="http://localhost:4000/solution/poj/1995.html"><![CDATA[<blockquote>
+  <p>题目链接：<a href="http://poj.org/problem?id=1995" target="_blank">1995 – Raising Module Numbers</a></p>
+</blockquote>
+
+<blockquote>
+  <p>第一行有一个整数 \(Z\)，表示 \(Z\) 组数据。<br />
+在每组数据中，第一行有一个整数 \(M\)，第二行有一个整数 \(H\)。<br />
+接下来 \(H\) 行，每行有两个整数 \(A_i,B_i\) (\(1\le i\le H\))。<br />
+求 \((A_1^{B_1}+A_2^{B_2}+\cdots+A_H^{B_H})\mod M\)。</p>
+</blockquote>
+
+<p>本题套用快速幂模版 (<a href="https://lyccrius.github.io/solution/acwing/89.html" target="_blank">AcWing 89. a^b</a>)。</p>
+
+<p>在每组数据中：每读入一组 \(A_i,B_i\)，计算一次 \(A_i^{B_i}\)，累积到 \(ans\) 中并取模，最后输出 \(ans\)。</p>
+
+<blockquote>
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/poj.org/problem%3Fid=1995/Raising%20Modulo%20Numbers.cpp" target="_blank">Raising Modulo Numbers.cpp</a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="poj" /><summary type="html"><![CDATA[题目链接：1995 – Raising Module Numbers]]></summary></entry><entry><title type="html">Acwing 998. 起床困难综合症</title><link href="http://localhost:4000/solution/acwing/998.html" rel="alternate" type="text/html" title="Acwing 998. 起床困难综合症" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/998</id><content type="html" xml:base="http://localhost:4000/solution/acwing/998.html"><![CDATA[<blockquote>
   <p>题目链接：<a href="https://www.acwing.com/problem/content/1000/" target="_blank">998. 起床困难综合症</a></p>
 </blockquote>
 
@@ -19,7 +143,7 @@
   <li>用每个参数的第 \(k\) 位参与位运算。若初值为 \(1\)，则 \(n\) 次位运算后结果位 \(1\)；若初值为 \(0\)，则 \(n\) 次位运算后结果为 \(0\)。</li>
 </ol>
 
-<p>如果不满足上述条件，要么填 \(1\) 会超过 \($m\) 的范围，要么填 \(1\) 不如 \(0\) 更优。</p>
+<p>如果不满足上述条件，要么填 \(1\) 会超过 \(m\) 的范围，要么填 \(1\) 不如 \(0\) 更优。</p>
 
 <p>这种情况下令 \(x_0\) 的第 \(k\) 位为 \(0\) 显然更好。</p>
 
@@ -45,9 +169,11 @@
 
 <p>为了方便起见，我们将 \(F\) 数组其他的值设为无穷大。</p>
 
-<p>目标是 \(F[(1&lt;&lt;n)-1,n-1]\)，即经过所有点 (\(i\) 的所有为都是 \(1\))，处于重点 \(n-1\) 的最短路。</p>
+<p>目标是 \(F[(1&lt;&lt;n)-1,n-1]\)，即经过所有点 (\(i\) 的所有位都是 \(1\))，处于终点 \(n-1\) 的最短路。</p>
 
-<p>在任意时刻，有 \(F[i,j]=min\{F[i\oplus(1&lt;&lt;j),k]+weight(k,j)\}\)，其中 \(0\le j&lt;n\) 并且 \(((i&gt;&gt;j)\&amp;1)=1\)，即当前时刻 “被经过的点的状态” 对应的二进制数的第 \(j\) 位应该赋值为 \(0\)，也就是 \(i\oplus(i&lt;&lt;j)\)。</p>
+<p>在任意时刻，有 \(F[i,j]=min\{F[i\oplus(1&lt;&lt;j),k]+weight(k,j)\}\)，其中 \(0\le k&lt;n\) 并且 \(((i&gt;&gt;j)\&amp;1)=1\)，即当前时刻 “被经过的点的状态” 对应的二进制数为 \(i\)，处于点 \(j\)。</p>
+
+<p>因为 \(j\) 只能被恰好经过一次，所以一定是刚刚经过的，故在上一时刻 “被经过的点的状态”对应的二进制数的第 \(j\) 位应该赋值为 \(0\)，也就是 \(i\oplus(i&lt;&lt;j)\)。</p>
 
 <p>另外，上一时刻所处的位置可能是 \(i\oplus(1&lt;&lt;j)\)中任意一个是 \(1\) 的数位 \(k\)，从 \(k\) 走到 \(j\) 需经过 \(weight(k,j)\) 的路程，可以考虑所有这样的 \(k\) 取最小值。</p>
 
@@ -55,7 +181,7 @@
   <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/93/最短Hamilton路径.cpp" target="_blank">最短Hamiltion路径.cpp<a></a></a></p>
 </blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：91. 最短Hamiltion路径 - AcWing题库]]></summary></entry><entry><title type="html">《算法竞赛进阶指南》0x01 位运算</title><link href="http://localhost:4000/course/sfjs/jjzn/0x01.html" rel="alternate" type="text/html" title="《算法竞赛进阶指南》0x01 位运算" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/course/sfjs/jjzn/0x01</id><content type="html" xml:base="http://localhost:4000/course/sfjs/jjzn/0x01.html"><![CDATA[<p>0x 代表 16 进制。<br />
 0x00~0xFF 是以最高位二进制位为正负符号位的“补码”形式表示的 8 位二进制数。<br />
-8 位二进制数对应 char 类型，范围为 -128~127。
+8 位二进制数对应 char 类型，范围为 -128～127。
 其中 0xFF 代表 -1，0x7F 代表最大值 127。</p>
 
 <h2 id="补码">补码</h2>
@@ -64,12 +190,16 @@
 <h3 id="32-位有符号整数-int">32 位有符号整数 int：</h3>
 <p>以最高位为符号位，0 表示非负数，1 表示负数。<br />
 对于最高位为0的每种编码 \(C\)，直接看作 32 位二进制数 \(S\)。<br />
-同时，定义该编码按位取反后得到的编码 \(~C\) 表示的数值为 \(-1-S\)。<br />
-在补码下每个数值都有唯一的表示方式，并且任意两个数值做加减法运算，都等价于在 32 为补码下做<strong>最高位不进位</strong>的二进制加减法运算。</p>
+同时，定义该编码按位取反后得到的编码 \(～C\) 表示的数值为 \(-1-S\)。</p>
+<blockquote>
+\[C+～C=11111111\ 11111111\ 11111111\ 11111111=0x7F=-1\]
+</blockquote>
+
+<p>在补码下每个数值都有唯一的表示方式，并且任意两个数值做加减法运算，都等价于在 32 为补码下做<strong>最高位不进位</strong>的二进制加减法运算。</p>
 <blockquote>
   <p>正数：原码=反码=补码<br />
 负数：反码=原码除符号位取反；补码=反码+1<br />
-个人理解：负数补码的符号位相当于 <code class="language-plaintext highlighter-rouge">-2147483648</code>，其余位与正数表示数值相同。</p>
+个人理解：负数补码的符号位相当于 \(-2147483648(2^{31})\)，其余位与正数表示数值相同。</p>
 </blockquote>
 
 <h4 id="0x3f-3f-3f-3f">0x3F 3F 3F 3F</h4>
@@ -190,24 +320,50 @@
 <p>而在补码表示下，\(～n=-1-n\)，因此：</p>
 <blockquote>
   <p>lowbit\((n)=n\&amp;(～n+1)=n\&amp;(-n)\)</p>
-</blockquote>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x 代表 16 进制。 0x00~0xFF 是以最高位二进制位为正负符号位的“补码”形式表示的 8 位二进制数。 8 位二进制数对应 char 类型，范围为 -128~127。 其中 0xFF 代表 -1，0x7F 代表最大值 127。]]></summary></entry><entry><title type="html">POJ 1995 Raising Module Numbers</title><link href="http://localhost:4000/solution/poj/1995.html" rel="alternate" type="text/html" title="POJ 1995 Raising Module Numbers" /><published>2022-07-26T00:00:00+08:00</published><updated>2022-07-26T00:00:00+08:00</updated><id>http://localhost:4000/solution/poj/1995</id><content type="html" xml:base="http://localhost:4000/solution/poj/1995.html"><![CDATA[<blockquote>
-  <p>题目链接：<a href="http://poj.org/problem?id=1995" target="_blank">1995 – Raising Module Numbers</a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="course" /><category term="sfjs" /><category term="jjzn" /><summary type="html"><![CDATA[0x 代表 16 进制。 0x00~0xFF 是以最高位二进制位为正负符号位的“补码”形式表示的 8 位二进制数。 8 位二进制数对应 char 类型，范围为 -128～127。 其中 0xFF 代表 -1，0x7F 代表最大值 127。]]></summary></entry><entry><title type="html">AcWing 89. a^b</title><link href="http://localhost:4000/solution/acwing/89.html" rel="alternate" type="text/html" title="AcWing 89. a^b" /><published>2022-07-25T00:00:00+08:00</published><updated>2022-07-25T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/89</id><content type="html" xml:base="http://localhost:4000/solution/acwing/89.html"><![CDATA[<blockquote>
+  <p>题目链接：<a href="https://www.acwing.com/problem/content/91/" target="_blank">89. a^b - AcWing题库</a></p>
 </blockquote>
 
+<p>如果 \(b\) 在二进制表示下有 \(k\) 位，其中第 \(i(0\le i&lt;k)\) 位的数字是 \(c_i\) ，那么：</p>
 <blockquote>
-  <p>第一行有一个整数 \(Z\)，表示 \(Z\) 组数据。<br />
-在每组数据中，第一行有一个整数 \(M\)，第二行有一个整数 \(H\)。<br />
-接下来 \(H\) 行，每行有两个整数 \(A_i,B_i\) (\(1\le i\le H\))。<br />
-求 \((A_1^{B_1}+A_2^{B_2}+\cdots+A_H^{B_H})\mod M\)。</p>
+\[b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+…+c_{0}2^{0}\]
 </blockquote>
 
-<p>本题套用快速幂模版 (<a href="https://lyccrius.github.io/solution/acwing/89.html" target="_blank">AcWing 89. a^b</a>)。</p>
+<p>于是：</p>
+<blockquote>
+\[{a^b}=a^{c_{k-1}*2^{k-1}}*a^{c_{k-1}*2^{k-1}}*…*a^{c_0*2^0}\]
+</blockquote>
 
-<p>在每组数据中：每读入一组 \(A_i,B_i\)，计算一次 \(A_i^{B_i}\)，累积到 \(ans\) 中并取模，最后输出 \(ans\)。</p>
+<p>因为 \(k=\lceil{log_2(b+1)}\rceil\) ，所以上式乘积项的数量不多于 \(\lceil{log_2(b+1)}\rceil\) 个。</p>
+
+<p>又因为：</p>
+<blockquote>
+\[a^{2^i}=(a^{2^{i-1}})^2\]
+</blockquote>
+
+<p>所以很容易通过 \(k\) 次递推求出每个乘积项，当 \(c_i=1\) 时，把该乘积项累积到答案中。</p>
+<ul>
+  <li>\(b\&amp;1\) 运算可以取出 \(b\) 在二进制表示下的最低位</li>
+  <li>\(b&gt;&gt;1\) 运算可以舍去最低位</li>
+</ul>
+
+<p>在递推的过程中将二者结合，就可以遍历 \(b\) 在二进制表示下的所有数位 \(c_i\) 。</p>
+
+<p>在循环到 \(i\) 次时，变量 \(a\) 中存储的是 \(a^{2^i}\)，若 \(b\) 该位为 1，则把此时的变量 \(a\) 累计到答案 ans 中。</p>
+
+<p>在C++语言中，两个数值执行算数运算时，以参与运算的最高数值类型为基准，与保存结果的变量类型无关。</p>
+
+<p>虽然两个 32 位整数的乘积可能超过 int 类型的表示范围，但是 CPU 只会用 1 个 32 位寄存器保存结果，造成越界现象。</p>
+
+<p>因此，我们必须把<strong>其中一个数强制转换成 64 位整数类型 long long</strong>参与运算，从而得到正确的结果。</p>
+
+<p>最终对 \(p\) 取模以后，执行赋值操作时，该记过会被隐式转换成 int 存回 ans 中。</p>
+
+<p>整个算法的时间复杂度位 \(O(log_2b)\)。</p>
 
 <blockquote>
-  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/poj.org/problem%3Fid=1995/Raising%20Modulo%20Numbers.cpp" target="_blank">Raising Modulo Numbers.cpp</a></p>
-</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="poj" /><summary type="html"><![CDATA[题目链接：1995 – Raising Module Numbers]]></summary></entry><entry><title type="html">Acwing 90. 64位整数乘法</title><link href="http://localhost:4000/solution/acwing/90.html" rel="alternate" type="text/html" title="Acwing 90. 64位整数乘法" /><published>2022-07-25T00:00:00+08:00</published><updated>2022-07-25T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/90</id><content type="html" xml:base="http://localhost:4000/solution/acwing/90.html"><![CDATA[<blockquote>
+  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/91/a^b.cpp" target="_blank">a^b.cpp</a></p>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：89. a^b - AcWing题库]]></summary></entry><entry><title type="html">Acwing 90. 64位整数乘法</title><link href="http://localhost:4000/solution/acwing/90.html" rel="alternate" type="text/html" title="Acwing 90. 64位整数乘法" /><published>2022-07-25T00:00:00+08:00</published><updated>2022-07-25T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/90</id><content type="html" xml:base="http://localhost:4000/solution/acwing/90.html"><![CDATA[<blockquote>
   <p>题目链接：<a href="https://www.acwing.com/problem/content/92/" target="_blank">90. 64位整数乘法 - AcWing题库</a></p>
 </blockquote>
 
@@ -264,50 +420,7 @@
 
 <blockquote>
   <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/92/64位整数乘法2.cpp" target="_blank">64位整数乘法2.cpp</a></p>
-</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：90. 64位整数乘法 - AcWing题库]]></summary></entry><entry><title type="html">AcWing 89. a^b</title><link href="http://localhost:4000/solution/acwing/89.html" rel="alternate" type="text/html" title="AcWing 89. a^b" /><published>2022-07-25T00:00:00+08:00</published><updated>2022-07-25T00:00:00+08:00</updated><id>http://localhost:4000/solution/acwing/89</id><content type="html" xml:base="http://localhost:4000/solution/acwing/89.html"><![CDATA[<blockquote>
-  <p>题目链接：<a href="https://www.acwing.com/problem/content/91/" target="_blank">89. a^b - AcWing题库</a></p>
-</blockquote>
-
-<p>如果 \(b\) 在二进制表示下有 \(k\) 位，其中第 \(i(0\le i&lt;k)\) 位的数字是 \(c_i\) ，那么：</p>
-<blockquote>
-\[b=c_{k-1}2^{k-1}+c_{k-2}2^{k-2}+…+c_{0}2^{0}\]
-</blockquote>
-
-<p>于是：</p>
-<blockquote>
-\[{a^b}=a^{c_{k-1}*2^{k-1}}*a^{c_{k-1}*2^{k-1}}*…*a^{c_0*2^0}\]
-</blockquote>
-
-<p>因为 \(k=\lceil{log_2(b+1)}\rceil\) ，所以上式乘积项的数量不多于 \(\lceil{log_2(b+1)}\rceil\) 个。</p>
-
-<p>又因为：</p>
-<blockquote>
-\[a^{2^i}=(a^{2^{i-1}})^2\]
-</blockquote>
-
-<p>所以很容易通过 \(k\) 次递推求出每个乘积项，当 \(c_i=1\) 时，把该乘积项累积到答案中。</p>
-<ul>
-  <li>\(b\&amp;1\) 运算可以取出 \(b\) 在二进制表示下的最低位</li>
-  <li>\(b&gt;&gt;1\) 运算可以舍去最低位</li>
-</ul>
-
-<p>在递推的过程中将二者结合，就可以遍历 \(b\) 在二进制表示下的所有数位 \(c_i\) 。</p>
-
-<p>在循环到 \(i\) 次时，变量 \(a\) 中存储的是 \(a^{2^i}\)，若 \(b\) 该位为 1，则把此时的变量 \(a\) 累计到答案 ans 中。</p>
-
-<p>在C++语言中，两个数值执行算数运算时，以参与运算的最高数值类型为基准，与保存结果的变量类型无关。</p>
-
-<p>虽然两个 32 位整数的乘积可能超过 int 类型的表示范围，但是 CPU 只会用 1 个 32 位寄存器保存结果，造成越界现象。</p>
-
-<p>因此，我们必须把<strong>其中一个数强制转换成 64 位整数类型 long long</strong>参与运算，从而得到正确的结果。</p>
-
-<p>最终对 \(p\) 取模以后，执行赋值操作时，该记过会被隐式转换成 int 存回 ans 中。</p>
-
-<p>整个算法的时间复杂度位 \(O(log_2b)\)。</p>
-
-<blockquote>
-  <p>完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/91/a^b.cpp" target="_blank">a^b.cpp</a></p>
-</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：89. a^b - AcWing题库]]></summary></entry><entry><title type="html">AcWing 算法基础课 二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="AcWing 算法基础课 二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
+</blockquote>]]></content><author><name>Lyccrius</name></author><category term="solution" /><category term="acwing" /><summary type="html"><![CDATA[题目链接：90. 64位整数乘法 - AcWing题库]]></summary></entry><entry><title type="html">AcWing 算法基础课 二分</title><link href="http://localhost:4000/note/oi/acwing-erfen.html" rel="alternate" type="text/html" title="AcWing 算法基础课 二分" /><published>2022-07-21T11:32:55+08:00</published><updated>2022-07-21T11:32:55+08:00</updated><id>http://localhost:4000/note/oi/acwing-erfen</id><content type="html" xml:base="http://localhost:4000/note/oi/acwing-erfen.html"><![CDATA[<blockquote>
   <p>7月14号老师布置任务让15号讲二分<br />
 7月15号返校听填报志愿指导没讲成<br />
 7月16号组织了场内部比赛又没讲成<br />
@@ -449,30 +562,4 @@ int bsearch_2(int l, int r)
 
 <p>“奋斗青年”的反义词是“摆烂青年”，但并不是说这个世界上只容许这两种人的存在。一个观点如果单从字面角度进行否定话处理，那么其否命题将与之走向两个极端。这对于逻辑推理来说是好的，却不利于观点间的驳论。</p>
 
-<p>并不是说我已经完全放弃了进入理特班的念头，而是更愿意在进入一中后的一年时间内，通过自己真正的努力考入理特班。</p>]]></content><author><name>Lyccrius</name></author><category term="essay" /><summary type="html"><![CDATA[“在追寻一个方向的路上，出现的绊脚石也不一定是绊脚石。可能它只是想让你停下来思考你是否在正确的道路上。”——uncle-lu]]></summary></entry><entry><title type="html">我在想</title><link href="http://localhost:4000/essay/wo-zai-xiang.html" rel="alternate" type="text/html" title="我在想" /><published>2022-04-21T00:00:00+08:00</published><updated>2022-04-21T00:00:00+08:00</updated><id>http://localhost:4000/essay/wo-zai-xiang</id><content type="html" xml:base="http://localhost:4000/essay/wo-zai-xiang.html"><![CDATA[<p>我在想语文还有半个单元文言文注解没背，作文的新素材也没有找好。数学最近是不是有点小退步，计算还是不太仔细，圆和二次函数应用题的掌握还有没有问题，怎么办学霸前桌又在把我往死里卷惨绝人寰不留余地。英语听写还没背糟糕，八年级英语单词还有一部分不会拼。物理化学听说下周考试，实验探究又要一分分的扣。还有政治历史，能不能再多空一些时间出来学，能不能再努力一点。</p>
-
-<p>今天也有在好好学习天天向上吗？</p>
-
-<p>今天也有在热爱生活吗？</p>
-
-<p>今天也活在过去的光环里吗？</p>
-
-<p>我会想周一到周五简直是出卖灵魂的日子，但那又是我日复一日不抑制翻涌奔腾的大欢喜。</p>
-
-<p>体育课要跑八百一千，大家咆哮着要反抗体育老师。</p>
-
-<p>总有那么一群家伙因为一点小事从早上哈哈哈到晚上。</p>
-
-<p>总有女孩子在这阳光里走进某某的心底，我就看着她的马尾一晃一晃直发呆。</p>
-
-<p>总有形成组织的学霸们在讲台上讨论理科题，偶尔也会刹不住车演变成凡尔赛大会。</p>
-
-<p>跑操的时候心想每个同学保持相同间距，只要我够快，后面的同学就会加速，环形跑道上前面的同学也会加速，直到我们抵达第四宇宙速度一飞冲天逃离银河系。</p>
-
-<p>走过知行楼右面的时候盯着地下车库，心想这里又发生过什么故事。</p>
-
-<p>中午拿饭的时候推推搡搡，大家举着餐具疯了一样冲上去，争抢着开饭桶再一人吐槽一句今天吃的好像猪食。</p>
-
-<p>其实有时候会想的很深，特别是和蔼可亲的班主任在的时候总把话题引到诸如 中考 未来 选拔人才 这种事情上，好像初三的我们已经百日誓师过了，好像马上要体育中考了。其实有时候想的也挺简单的，无非是在课间和朋友们打打闹闹，看见在意的人走过就脸红心跳。我喜欢在阳台里吹晚风，那时候或者说是放空，看着忽明忽灭的教学楼，远处阑珊的灯火和高楼大厦，偶尔也会觉得孤独。</p>
-
-<p>但这就是一段充满白日梦和胡思乱想的时光啊。</p>]]></content><author><name>Lyccrius</name></author><category term="essay" /><summary type="html"><![CDATA[我在想语文还有半个单元文言文注解没背，作文的新素材也没有找好。数学最近是不是有点小退步，计算还是不太仔细，圆和二次函数应用题的掌握还有没有问题，怎么办学霸前桌又在把我往死里卷惨绝人寰不留余地。英语听写还没背糟糕，八年级英语单词还有一部分不会拼。物理化学听说下周考试，实验探究又要一分分的扣。还有政治历史，能不能再多空一些时间出来学，能不能再努力一点。]]></summary></entry></feed>
+<p>并不是说我已经完全放弃了进入理特班的念头，而是更愿意在进入一中后的一年时间内，通过自己真正的努力考入理特班。</p>]]></content><author><name>Lyccrius</name></author><category term="essay" /><summary type="html"><![CDATA[“在追寻一个方向的路上，出现的绊脚石也不一定是绊脚石。可能它只是想让你停下来思考你是否在正确的道路上。”——uncle-lu]]></summary></entry></feed>
