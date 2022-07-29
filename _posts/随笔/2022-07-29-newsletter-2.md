@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "第二次 Newsletter 人类是无法相互理解的"
+title: "第二次 Newsletter"
 date:   2022-07-29 
 categories: essay
 ---
 
-这是一篇与感情有关的文章。
+# 人类是无法相互理解的
 
 ## 动机
 
