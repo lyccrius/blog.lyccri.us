@@ -11,13 +11,13 @@ categories: course acwing sfjck
 > 7月17号最后又安排我讲的归并排序  
 > 哈哈哈哈哈哈哈哈。。。。。。。。
 
-# 引入
+## 引入
 提到二分，大多数oier的第一反应应该是二分查找，即在一个有序序列中查找一个数字或字符是否出现及某次出现的位置。  
 而正因为序列是有序的，所以在学习此算法时通常会误认为二分的本质是在具有单调性的序列上进行定位操作。  
 
 实则不然……
 
-# 二分的本质
+## 二分的本质
 寻找不同性质区间的边界。  
 
 二分的本质实际上是根据某一性质将某一序列划分为前后两部分，并寻找这两部分的边界。
@@ -26,7 +26,7 @@ categories: course acwing sfjck
 
 至于判断数字x是否存在于序列a中，则可根据二分得到的边界值进行判断，即判断 a[i] == x。
 
-# 模版
+## 模版
 这里粘两个 yxc 的二分模版
 
 ```
@@ -61,11 +61,11 @@ int bsearch_2(int l, int r)
 
 至于什么情况下需要 + 1 ，请自行理解并视情况而定。
 
-# 习题及代码
-> <a href="https://www.acwing.com/problem/content/791/" target="_blank">Acwing 789. 数的范围</a>  
+## 习题及代码
+> <a href="https://www.acwing.com/problem/content/791/" target="_blank">789. 数的范围 - AcWing题库</a>  
 > <a href="https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/791/数的范围.cpp" target="_blank">数的范围.cpp</a>
 
-> <a href="https://www.acwing.com/problem/content/792/" target="_blank">AcWing 790. 数的三次方根</a>  
+> <a href="https://www.acwing.com/problem/content/792/" target="_blank">790. 数的三次方根 - AcWing题库</a>  
 > <a href="https://gitee.com/lyccrius/oi/tree/master/www.acwing.com/problem/content/792/数的三次方根.cpp" target="_blank">数的三次方根.cpp</a>
 
 ---
