@@ -1,5 +1,5 @@
 ---
 layout: archive
-which_category: acwing
+which_category: solution acwing
 title: All posts of category 'solution/acwing'
 ---
