@@ -20,11 +20,12 @@
         </main>
     </body>
     <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.13.1/dist/av-min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.13.1/dist/av-min.js"></script> -->
     <script type="text/javascript">
-        var {
-            Query
-        } = AV;
+
+        const AV = require('leancloud-storage');
+        const { Query, User } = AV;
+
         AV.init({
             appId: "lypAdm04Ue9NTv3Fq3ONeVgk-MdYXbMMI",
             appKey: "3pDgFD1mhMrcy14dLgsFh5NX",
