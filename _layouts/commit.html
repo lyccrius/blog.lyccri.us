@@ -9,7 +9,7 @@
             <p>现在总共 b 了 {{count}} 条</p>
             <section class="item" v-for="item in contents" v-cloak>
                 <blockquote>
-                    <p>现在总共 b 了 {{count}} 条</p>
+                    <p v-html='item.attributes.cnt'></p>
                     <p v-html='item.attributes.content'></p>
                     <p v-html='item.attributes.time'></p>
                 </blockquote>
@@ -66,10 +66,12 @@
                 } else {
                     let resC = results;
                     reqData = false;
+                    var cnt = 0;
                     resC.forEach((i) => {
                         let dateTmp = new Date(i.createdAt);
                         i.attributes.time = `${dateTmp.getFullYear()}-${(dateTmp.getMonth() + 1) < 10 ? ('0' + (dateTmp.getMonth()+1)) : dateTmp.getMonth()+1}-${(dateTmp.getDate() + 1) < 10 ? ('0' + dateTmp.getDate()) : dateTmp.getDate()} ${(dateTmp.getHours() + 1) <= 10 ? ('0' + dateTmp.getHours()) : dateTmp.getHours()}:${(dateTmp.getMinutes() + 1) <= 10 ? ('0' + dateTmp.getMinutes()) : dateTmp.getMinutes()}`;
                         i.attributes.content = "<pre>" + urlToLink(i.attributes.content) + "</pre>";
+                        i.attributes.cnt = ++ cnt;
                         app.contents.push(i);
                     })
                 }
@@ -78,5 +80,9 @@
         }
 
         getData(0);
+
+        query.count().then(function(count) {
+            app.count = count;
+        }, function(error) {});
     </script>
 </html>
