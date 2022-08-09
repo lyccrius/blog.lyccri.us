@@ -7,9 +7,10 @@
             {%-include back_link.html-%}
             <h1>{{ page.title }}</h1>
             <p>现在总共 b 了 {{count}} 条</p>
+            <p>{{cnt}}</p>
             <section class="item" v-for="item in contents" v-cloak>
                 <blockquote>
-                    <p v-html='item.attributes.cnt'></p>
+                    <p v-html=cnt-'item.attributes.cnt'></p>
                     <p v-html='item.attributes.content'></p>
                     <p v-html='item.attributes.time'></p>
                 </blockquote>
@@ -24,6 +25,8 @@
     <script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.13.1/dist/av-min.js"></script>
     <script type="text/javascript">
+        var cnt = 0;
+
         var {
             Query
         } = AV;
@@ -60,7 +63,7 @@
         }
 
         function getData(page = 0) {
-            query.ascending('createdAt').skip(page * 20).limit(20).find().then(function(results) {
+            query.descending('createdAt').skip(page * 20).limit(20).find().then(function(results) {
                 if (results.length == 0) {
                     alert('No more.')
                 } else {
@@ -71,7 +74,7 @@
                         let dateTmp = new Date(i.createdAt);
                         i.attributes.time = `${dateTmp.getFullYear()}-${(dateTmp.getMonth() + 1) < 10 ? ('0' + (dateTmp.getMonth()+1)) : dateTmp.getMonth()+1}-${(dateTmp.getDate() + 1) < 10 ? ('0' + dateTmp.getDate()) : dateTmp.getDate()} ${(dateTmp.getHours() + 1) <= 10 ? ('0' + dateTmp.getHours()) : dateTmp.getHours()}:${(dateTmp.getMinutes() + 1) <= 10 ? ('0' + dateTmp.getMinutes()) : dateTmp.getMinutes()}`;
                         i.attributes.content = "<pre>" + urlToLink(i.attributes.content) + "</pre>";
-                        i.attributes.cnt = 1;
+                        i.attributes.cnt = cnt ++;
                         app.contents.push(i);
                     })
                 }
