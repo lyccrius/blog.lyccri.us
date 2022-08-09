@@ -60,7 +60,7 @@
         }
 
         function getData(page = 0) {
-            query.descending('createdAt').skip(page * 20).limit(20).find().then(function(results) {
+            query.ascending('createdAt').skip(page * 20).limit(20).find().then(function(results) {
                 if (results.length == 0) {
                     alert('No more.')
                 } else {
@@ -71,7 +71,7 @@
                         let dateTmp = new Date(i.createdAt);
                         i.attributes.time = `${dateTmp.getFullYear()}-${(dateTmp.getMonth() + 1) < 10 ? ('0' + (dateTmp.getMonth()+1)) : dateTmp.getMonth()+1}-${(dateTmp.getDate() + 1) < 10 ? ('0' + dateTmp.getDate()) : dateTmp.getDate()} ${(dateTmp.getHours() + 1) <= 10 ? ('0' + dateTmp.getHours()) : dateTmp.getHours()}:${(dateTmp.getMinutes() + 1) <= 10 ? ('0' + dateTmp.getMinutes()) : dateTmp.getMinutes()}`;
                         i.attributes.content = "<pre>" + urlToLink(i.attributes.content) + "</pre>";
-                        i.attributes.cnt = ++ cnt;
+                        i.attributes.cnt = 1;
                         app.contents.push(i);
                     })
                 }
