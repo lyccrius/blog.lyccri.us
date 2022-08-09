@@ -7,7 +7,6 @@
             {%-include back_link.html-%}
             <h1>{{ page.title }}</h1>
             <p>现在总共 b 了 {{count}} 条</p>
-            <p>{{cnt}}</p>
             <section class="item" v-for="item in contents" v-cloak>
                 <blockquote>
                     <p v-html='{{cnt}}-item.attributes.cnt'></p>
@@ -80,12 +79,12 @@
                 }
 
             }, function(error) {});
+
+            query.count().then(function(count) {
+                app.count = count;
+            }, function(error) {});
         }
 
         getData(0);
-
-        query.count().then(function(count) {
-            app.count = count;
-        }, function(error) {});
     </script>
 </html>
