@@ -10,7 +10,7 @@
             <p>{{cnt}}</p>
             <section class="item" v-for="item in contents" v-cloak>
                 <blockquote>
-                    <p v-html=cnt-'item.attributes.cnt'></p>
+                    <p v-html='{{cnt}}-item.attributes.cnt'></p>
                     <p v-html='item.attributes.content'></p>
                     <p v-html='item.attributes.time'></p>
                 </blockquote>
