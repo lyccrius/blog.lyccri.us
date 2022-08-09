@@ -6,9 +6,10 @@
           <div class="w">
             {%-include back_link.html-%}
             <h1>{{ page.title }}</h1>
-            <p class="tip">现在总共 b 了 {{count}} 条</p>
+            <p>现在总共 b 了 {{count}} 条</p>
             <section class="item" v-for="item in contents" v-cloak>
                 <blockquote>
+                    <p>现在总共 b 了 {{count}} 条</p>
                     <p v-html='item.attributes.content'></p>
                     <p v-html='item.attributes.time'></p>
                 </blockquote>
