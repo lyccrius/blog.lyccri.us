@@ -77,4 +77,4 @@ int main() {
 }
 ```
 
-> 完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/www.acwing.com/problem/content/95/非递归实现组合型枚举.cpp" target="_blank">非递归实现组合型枚举</a>
+> 完整代码：<a href="https://gitee.com/lyccrius/oi/blob/master/AcWing/93/非递归实现组合型枚举.cpp" target="_blank">非递归实现组合型枚举</a>
