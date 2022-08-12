@@ -2,7 +2,7 @@
 layout: post
 title: "AcWing 算法基础课 区间合并"
 date:   2022-07-30
-categories: course acwing sfjck
+categories: course acwing-sfjck
 ---
 
 ## 合并步骤

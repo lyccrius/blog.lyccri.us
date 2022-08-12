@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "AcWing 算法基础课 二分"
+title: "AcWing 算法基础课 二分"
 date:   2022-07-21 11:32:55 +0800
-categories: course acwing sfjck
+categories: course acwing-sfjck
 ---
 
 > 7月14号老师布置任务让15号讲二分  
