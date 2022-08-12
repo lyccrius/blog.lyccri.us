@@ -11,7 +11,7 @@ entries:
       - title: rss
         url: feed.xml
       - title: contact
-        url: mailto:lyccrius@outlook.com
+        url: mailto:lyccrius@icloud.com
       - title: friend-link
         url: friend-link
       - title: github repo
@@ -25,19 +25,19 @@ entries:
     post_list:
       limit: 5
       show_more: true
-      show_more_text: See archive...
-      show_more_url: archive.html
+      show_more_text: See library...
+      show_more_url: library.html
 
   - title: course
     entries:
       - title: 算法竞赛
         entries: 
           - title: 进阶指南
-            url: course/sfjs/jjzn
+            url: course/sfjs-jjzn
       - title: AcWing
         entries:
           - title: 算法基础课
-            url: course/acwing/sfjck
+            url: course/acwing-sfjck
 
   - title: solution
     post_list:
