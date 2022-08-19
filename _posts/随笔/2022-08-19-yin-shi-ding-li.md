@@ -22,4 +22,6 @@ $$=a1a2(x+{b1\over a1})(x+{b2\over a2})$$
 
 根据因式定理：
 
-$$\because (x+{b1\over a1}),，(x+{b2\over a2})$$
+$$\because (x+{b1\over a1}),(x+{b2\over a2})$$ 是一元多项式 $$f(x)$$ 的因式
+即 $$(x-(-{b1\over a1})),，(x-(-{b2\over a2}))$$ 是一元多项式 $$f(x)$$ 的因式
+$$\therefore -{b1\over a1},-{b2\over a2}$$ 是一元多项式 $$f(x)$$ 的根
