@@ -18,3 +18,8 @@ categories: essay
 $$a1a2x^2+a1b2x+a2b1x+b1b2$$
 $$=(a1x+b1)(a2x+b2)$$
 $$=a1(x+{b1\over a1})a2(x+{b2\over a2})$$
+$$=a1a2(x+{b1\over a1})(x+{b2\over a2})$$
+
+根据因式定理：
+
+$$\because (x+{b1\over a1}),，(x+{b2\over a2})$$
