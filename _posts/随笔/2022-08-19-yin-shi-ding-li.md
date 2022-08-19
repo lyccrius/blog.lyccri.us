@@ -71,7 +71,7 @@ $$q_i\over p_j$$ 可能是原多项式的一个根，
 
 $$(x-{q_i\over p_j})$$ 可能是原多项式的一个因式。
 
-$${q_i\over p_j}\in\{\pm{1},\pm{2},\pm{1\over3},\pm{2\over3},\pm{1\over9},\pm{2\over9}\}(1\le i\le n,1\le j\le n)$$
+$${q_i\over p_j}(1\le i\le n,1\le j\le n)\in\{\pm{1},\pm{2},\pm{1\over3},\pm{2\over3},\pm{1\over9},\pm{2\over9}\}(1\le i\le n,1\le j\le n)$$
 
 根据预备役中每个根 $${q_i\over p_j}$$ 得出因式 $$(x-{q_i\over p_j})$$，
 
