@@ -63,7 +63,7 @@ $$\therefore a_n=9,a_0=-2$$
 
 记 $$p\in\{x\in Z\vert kx=a_n=9,k\in Z\}=\{\pm 1,\pm 3,\pm 9\},$$
 
-$$q\in\{x\in Z\vert kx=a_0=-2,k\in Z\}=\{\pm 1,\pm 2\}$$
+$$q\in\{x\in Z\vert kx=a_0=-2,k\in Z\}=\{\pm 1,\pm 2\}$$.
 
 根据因式定理的推论得：
 
