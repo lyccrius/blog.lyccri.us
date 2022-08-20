@@ -19,21 +19,21 @@ categories: essay
 
 ### 推论
 
-$$a1a2x^2+a1b2x+a2b1x+b1b2$$
+$$a_1a_2x^2+a_1b_2x+a_2b_1x+b_1b_2$$
 
-$$=(a1x+b1)(a2x+b2)$$
+$$=(a_1x+b_1)(a_2x+b_2)$$
 
-$$=a1(x+{b1\over a1})a2(x+{b2\over a2})$$
+$$=a_1(x+{b_1\over a_1})a_2(x+{b_2\over a_2})$$
 
-$$=a1a2(x+{b1\over a1})(x+{b2\over a2})$$
+$$=a_1a_2(x+{b_1\over a_1})(x+{b_2\over a_2})$$
 
 根据因式定理：
 
-$$\because (x+{b1\over a1}),(x+{b2\over a2})$$ 是一元多项式 $$f(x)$$ 的因式
+$$\because (x+{b_1\over a_1}),(x+{b_2\over a_2})$$ 是一元多项式 $$f(x)$$ 的因式
 
-即 $$(x-(-{b1\over a1})),，(x-(-{b2\over a2}))$$ 是一元多项式 $$f(x)$$ 的因式
+即 $$(x-(-{b_1\over a_1})),，(x-(-{b_2\over a_2}))$$ 是一元多项式 $$f(x)$$ 的因式
 
-$$\therefore -{b1\over a1},-{b2\over a2}$$ 是一元多项式 $$f(x)$$ 的根
+$$\therefore -{b_1\over a_1},-{b_2\over a_2}$$ 是一元多项式 $$f(x)$$ 的根
 
 同理，对与一个 $$n$$ 次 $$n+1$$ 项式，$$-{b_i\over a_i}(1\le i\le n)$$ 是它的根。
 
