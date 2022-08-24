@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<?php $hitokoto = file_get_contents('https://lyccrius.github.io/hitokoto/'); ?>
 
 <header>
   <h1>{{ site.title }}</h1>
@@ -10,15 +9,18 @@ layout: default
   {%-endif-%}
 </header>
 
+<body>
+  <div class="wrap">
+      <p class="content">一言测试</p>
+  </div>
+  <script src="https://cdn.bootcss.com/jquery/2.0.2/jquery.min.js"></script>
+  <script>
+      $.post("https://lyccrius.github.io/hitokoto/", function(hitokoto) {
+          $(".content").html(hitokoto);
+      });
+  </script>
+</body>
+
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
-
-<p class="hitokoto"></p>
-
-<script type="text/javascript"src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
-<script type="text/javascript">
-  $.post("https://lyccrius.github.io/hitokoto/", function(hitokoto) {
-    $(".hitokoto").html(hitokoto);
-  });
-</script>
