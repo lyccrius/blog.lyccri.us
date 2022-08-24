@@ -11,3 +11,11 @@ layout: default
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
+
+<p id="hitokoto"></p>
+
+<script>
+  $.post("https://lyccrius.github.io/hitokoto/", function(hitokoto) {
+    $(".hitokoto").html(hitokoto);
+  });
+</script>
