@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+<?php $hitokoto = file_get_contents('https://lyccrius.github.io/hitokoto/'); ?>
+
 <header>
   <h1>{{ site.title }}</h1>
   {%-if site.theme_config.show_description-%}
@@ -12,10 +14,11 @@ layout: default
 
 {{ content }}
 
-<p id="hitokoto"></p>
+<hitokoto></hitokoto>
 
+<script type="text/javascript"src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
 <script>
   $.post("https://lyccrius.github.io/hitokoto/", function(hitokoto) {
-    $(".hitokoto").html(hitokoto);
+    $("hitokoto").html(hitokoto);
   });
 </script>
