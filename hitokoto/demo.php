@@ -11,7 +11,7 @@
     </div>
     <script src="https://cdn.bootcss.com/jquery/2.0.2/jquery.min.js"></script>
     <script>
-        $.post("https://域名及文件路径/hitokoto/", function(hitokoto) {
+        $.post("https://lyccrius.github.io/hitokoto/", function(hitokoto) {
             $(".content").html(hitokoto);
         });
     </script>
