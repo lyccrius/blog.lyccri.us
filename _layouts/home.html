@@ -9,18 +9,6 @@ layout: default
   {%-endif-%}
 </header>
 
-<body>
-  <div class="wrap">
-      <p class="content">一言测试</p>
-  </div>
-  <script src="https://cdn.bootcss.com/jquery/2.0.2/jquery.min.js"></script>
-  <script>
-      $.post("https://lyccrius.site/hitokoto/", function(hitokoto) {
-          $(".content").html(hitokoto);
-      });
-  </script>
-</body>
-
 {%-include menu_item.html collection=site.data.menu.entries-%}
 
 {{ content }}
