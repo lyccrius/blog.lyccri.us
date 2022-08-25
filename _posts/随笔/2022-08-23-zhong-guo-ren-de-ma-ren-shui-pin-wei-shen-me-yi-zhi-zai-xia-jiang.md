@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "中国人的骂人水平为什么一直在下降？"
+title: "「转载」中国人的骂人水平为什么一直在下降？"
 date:   2022-08-23
 author: 吴钊同
 categories: essay

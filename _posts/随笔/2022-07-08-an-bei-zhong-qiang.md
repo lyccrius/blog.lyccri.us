@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "关于安倍中枪的讨论"
+title: "「转载」关于安倍中枪的讨论"
 date:   2022-07-08
-author: 好困！-qq2592770276
+author: 好困！-[qq]2592770276
 categories: essay
 ---
 
