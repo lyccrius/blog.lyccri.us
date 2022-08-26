@@ -2,7 +2,7 @@
 layout: post
 title: "Code Style for OI"
 date:   2022-08-26
-author: <a href="https://men.ci" target="_blank">Menci</a>
+author: Menci-[site]https://men.ci
 categories: essay
 ---
 
