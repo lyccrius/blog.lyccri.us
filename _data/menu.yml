@@ -32,6 +32,10 @@ entries:
     entries:
       - title: 算法竞赛
         entries: 
+          - title: 入门经典
+            entries:
+              - title: 习题与解答
+                url: course/sfjs-rmjd-xtyjd
           - title: 进阶指南
             url: course/sfjs-jjzn
       - title: AcWing
