@@ -32,6 +32,8 @@ entries:
     entries:
       - title: 算法竞赛
         entries: 
+          - title: 学习指北
+            url: course/sfjs/xue-xi-zhi-bei
           - title: 入门经典
             url: course/sfjs/rmjd
             entries:
