@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "《算法竞赛》学习指北"
-date:   2022-08-28
+date:   2022-08-31
 categories: sfjs
 ---
 
