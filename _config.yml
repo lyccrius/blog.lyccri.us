@@ -27,3 +27,5 @@ plugins:
   - jekyll-seo-tag
 
 markdown: kramdown
+
+future: true
