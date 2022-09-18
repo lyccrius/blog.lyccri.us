@@ -13,6 +13,9 @@
 {%- if posts.size > 0 -%}
   <ul>
     {%- for post in posts limit: include.limit -%}
+        {% assign result = result | post %} 
+    {%- endfor -%}
+    {%- for post in result limit: include.limit -%}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </li>
