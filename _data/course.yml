@@ -2,69 +2,18 @@
 # https://github.com/riggraz/no-style-please#customize-the-menu
 
 entries:
-  - title: info
-    entries:
-      - title: about
-        url: about
-      - title: issue
-        url: issue
-      - title: rss
-        url: feed.xml
-      - title: contact
-        url: mailto:lyccrius@icloud.com
-      - title: friend-link
-        url: friend-link
-      - title: github repo
-        url: https://github.com/lyccrius/lyccrius.github.io
+  - title: 算法竞赛
+    entries: 
+      - title: 学习指北
+        url: course/sfjs/xue-xi-zhi-bei
+      - title: 入门经典
+        url: course/sfjs/rmjd
         entries:
-        - title: "Using theme <a href='https://github.com/riggraz/no-style-please/'>no-style-please</a>"
-        - title: "Built with <a href='https://www.jekyll.com.cn'>Jekyll</a>"
-        - title: "Built on <a href='https://pages.github.com'>Github Pages</a>"
-
-  - title: recent posts
-    post_list:
-      limit: 5
-      show_more: true
-      show_more_text: See library...
-      show_more_url: library
-
-  - title: course
+          - title: 习题与解答
+            url: course/sfjs/rmjd/xtyjd
+      - title: 进阶指南
+        url: course/sfjs/jjzn
+  - title: AcWing
     entries:
-      - title: 算法竞赛
-        entries: 
-          - title: 学习指北
-            url: course/sfjs/xue-xi-zhi-bei
-          - title: 入门经典
-            url: course/sfjs/rmjd
-            entries:
-              - title: 习题与解答
-                url: course/sfjs/rmjd/xtyjd
-          - title: 进阶指南
-            url: course/sfjs/jjzn
-      - title: AcWing
-        entries:
-          - title: 算法基础课
-            url: course/acwing-sfjck
-
-  - title: solution
-    post_list:
-      limit: 3
-      category: solution
-      show_more: true
-      show_more_text: See more solutions...
-      show_more_url: solution
-    entries:
-      - title: OJ
-        entries:
-          - title: AcWing
-            url: solution/acwing
-          - title: POJ
-            url: solution/poj
-
-  - title: essay
-    post_list:
-      limit: 3
-      category: essay
-      show_more: true
-      show_more_text: See more essays...
-      show_more_url: essay
+      - title: 算法基础课
+        url: course/acwing-sfjck
