@@ -29,10 +29,8 @@ entries:
       show_more_url: library
 
   - title: course
-    url: course
     entries:
       - title: 算法竞赛
-        url: course/sfjs
         entries: 
           - title: 学习指北
             url: course/sfjs/xue-xi-zhi-bei
@@ -40,7 +38,7 @@ entries:
             url: course/sfjs/rmjd
             entries:
               - title: 习题与解答
-                url: course/sfjs/rmjd-xtyjd
+                url: course/sfjs/rmjd/xtyjd
           - title: 进阶指南
             url: course/sfjs/jjzn
       - title: AcWing

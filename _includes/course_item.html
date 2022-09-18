@@ -1,0 +1,26 @@
+<ul>
+  {%-for item in include.collection-%}
+    <li>
+    {%- if item.url -%}
+      <a href="{{ item.url }}">{{ item.title }}</a>
+    {%- else -%}
+      {{ item.title }}
+    {%- endif -%}
+    </li>
+
+    {%-if item.course_list-%}
+      {%
+        include course_list.html
+          category=item.course_list.category
+          limit=item.course_list.limit
+          show_more=item.course_list.show_more
+          show_more_text=item.course_list.show_more_text
+          show_more_url=item.course_list.show_more_url
+     -%}
+    {%-endif-%}
+
+    {%-if item.entries-%}
+      {%-include course_item.html collection=item.entries-%}
+    {%-endif-%}
+  {%-endfor-%}
+</ul>
