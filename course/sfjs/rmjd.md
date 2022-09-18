@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: course
 which_category: rmjd
-title: All posts of course '算法竞赛入门经典'
+title: All posts of 《算法竞赛入门经典》
 ---

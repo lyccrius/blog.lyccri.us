@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: course
 which_category: jjzn
-title: All posts of course '算法竞赛进阶指南'
+title: All posts of 《算法竞赛进阶指南》
 ---
