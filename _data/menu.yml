@@ -26,7 +26,7 @@ entries:
       limit: 5
       show_more: true
       show_more_text: See library...
-      show_more_url: library.html
+      show_more_url: library
 
   - title: course
     entries:
