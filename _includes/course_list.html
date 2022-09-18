@@ -4,7 +4,7 @@
   {%-assign posts = site.posts-%}
 {%-endif-%}
 
-{% assign sortedPosts = posts | sort: 'title' %}
+{% assign sortedPosts = posts | sort: 'title' | reverse%}
 
 {%-if include.limit and posts.size > include.limit-%}
   {%-assign limit_exceeded = true-%}
