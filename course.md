@@ -1,6 +1,6 @@
 ---
 layout: page
-tile: Course
+title: "Course"
 ---
 
 {%-include course_item.html collection=site.data.course.entries-%}
