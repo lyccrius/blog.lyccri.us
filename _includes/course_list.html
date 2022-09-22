@@ -1,5 +1,5 @@
 {%-if include.category-%}
-  {%-assign posts = site.categories[include.category] | sort: post.title -%}  
+  {%-assign posts = site.categories[include.category] -%}  
 {%-else-%}
   {%-assign posts = site.posts | sort: post.title -%}
 {%-endif-%}
@@ -12,7 +12,7 @@
 
 {%- if posts.size > 0 -%}
   <ul>
-    {%- for post in posts limit: include.limit -%}
+    {%- for post in posts limit: include.limit reverse -%}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </li>
