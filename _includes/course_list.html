@@ -1,7 +1,7 @@
 {%-if include.category-%}
-  {%-assign posts = {{ site.categories[include.category] | sort: "title", "last" }} -%}  
+  {%-assign posts = site.categories[include.category] | sort: "title", "last"-%}  
 {%-else-%}
-  {%-assign posts = {{ site.posts | sort: "title", "last" }} -%}
+  {%-assign posts = site.posts | sort: "title", "last"-%}
 {%-endif-%}
 
 {%-if include.limit and posts.size > include.limit-%}
