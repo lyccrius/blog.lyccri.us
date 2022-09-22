@@ -10,11 +10,17 @@
   {%-assign limit_exceeded = false-%}
 {%-endif-%}
 
-{%-assign posts = posts | sort: 'title', 'first' }
+{%-assign posts_first = posts | sort: 'title', 'first' }
+{%-assign posts_last = posts | sort: 'title', 'last' }
 
 {%- if posts.size > 0 -%}
   <ul>
-    {%- for post in posts limit: include.limit -%}
+    {%- for post in posts_first limit: include.limit -%}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+    {%- endfor -%}
+    {%- for post in posts_last limit: include.limit -%}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </li>
