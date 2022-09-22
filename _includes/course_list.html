@@ -10,7 +10,7 @@
   {%-assign limit_exceeded = false-%}
 {%-endif-%}
 
-{% assign sortedPosts = posts | sort: post.title %}
+{% assign sortedPosts = posts | sort %}
 
 {%- if posts.size > 0 -%}
   <ul>
