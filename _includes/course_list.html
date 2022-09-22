@@ -10,9 +10,11 @@
   {%-assign limit_exceeded = false-%}
 {%-endif-%}
 
+{%-assign posts = posts | sort: 'title', 'first' }
+
 {%- if posts.size > 0 -%}
   <ul>
-    {%- for post in posts sort: 'title', 'first' limit: include.limit -%}
+    {%- for post in posts limit: include.limit -%}
         <li>
           <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         </li>
