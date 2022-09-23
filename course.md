@@ -1,6 +1,5 @@
 ---
-layout: page
-title: "Course"
+layout: archive
+which_category: course
+title: All posts of category 'essay'
 ---
-
-{%-include course_item.html collection=site.data.course.entries-%}

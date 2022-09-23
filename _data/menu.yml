@@ -29,7 +29,6 @@ entries:
       show_more_url: library
 
   - title: course
-    url: course
     entries:
       - title: AcWing
         url: course/acwing
