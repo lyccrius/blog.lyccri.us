@@ -31,6 +31,21 @@ entries:
   - title: course
     url: course
     entries:
+      - title: AcWing
+        url: course/acwing
+        entries:
+          - title: 算法基础课
+            url: course/acwing-sfjck
+      - title: NOI
+        entries:
+          - title: 《NOI》大纲
+            url: course/noi/da-gang
+            course_list:
+              limit: 3
+              category: noi
+              show_more: true
+              show_more_text: See more NOI...
+              show_more_url:
       - title: 算法竞赛
         url: course/sfjs
         entries: 
@@ -43,10 +58,22 @@ entries:
                 url: course/sfjs/rmjd-xtyjd
           - title: 进阶指南
             url: course/sfjs/jjzn
-      - title: AcWing
-        entries:
-          - title: 算法基础课
-            url: course/acwing-sfjck
+
+  - title: essay
+    post_list:
+      limit: 3
+      category: essay
+      show_more: true
+      show_more_text: See more essays...
+      show_more_url: essay
+
+  - title: oi
+    post_list:
+      limit: 3
+      category: oi
+      show_more: true
+      show_more_text: See more oi...
+      show_more_url: oi
 
   - title: solution
     post_list:
@@ -62,11 +89,3 @@ entries:
             url: solution/acwing
           - title: POJ
             url: solution/poj
-
-  - title: essay
-    post_list:
-      limit: 3
-      category: essay
-      show_more: true
-      show_more_text: See more essays...
-      show_more_url: essay
