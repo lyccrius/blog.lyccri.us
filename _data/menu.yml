@@ -37,9 +37,17 @@ entries:
           - title: 算法基础课
             url: course/acwing-sfjck
       - title: NOI
+        url: course/noi
         entries:
           - title: 《NOI》大纲
             url: course/noi/da-gang
+            entries:
+              - title: 入门级
+                url: junior-level
+              - title: 提高级
+                url: senior-level
+              - title: NOI级
+                url: noi-level
             course_list:
               limit: 3
               category: noi
