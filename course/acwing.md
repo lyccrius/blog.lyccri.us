@@ -1,5 +1,5 @@
 ---
 layout: course
-which_category: acwing-sfjck
-title: AcWing 算法基础课
+which_category: course acwing
+title: AcWing
 ---
