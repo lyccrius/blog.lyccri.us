@@ -3,7 +3,7 @@ layout: post
 title: "Code Style for OI"
 date:   2022-08-26
 author: Menci
-categories: essay
+categories: oi
 ---
 
 本文介绍本人在 OI 中常用的代码规范。
