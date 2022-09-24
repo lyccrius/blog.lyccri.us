@@ -34,7 +34,7 @@ entries:
         url: course/acwing
         entries:
           - title: 算法基础课
-            url: course/acwing-sfjck
+            url: course/acwing/sfjck
       - title: NOI 大纲
         url: course/noi/da-gang
         entries:

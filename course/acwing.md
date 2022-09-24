@@ -1,5 +1,5 @@
 ---
 layout: course
-which_category: course acwing
+which_category: acming
 title: AcWing
 ---
