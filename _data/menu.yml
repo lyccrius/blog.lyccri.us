@@ -31,10 +31,10 @@ entries:
   - title: course
     entries:
       - title: AcWing
-        url: course/acwing
+        url: course/acming
         entries:
           - title: 算法基础课
-            url: course/acwing/sfjck
+            url: course/acming/sfjck
       - title: NOI 大纲
         url: course/noi/da-gang
         entries:
@@ -85,5 +85,9 @@ entries:
         entries:
           - title: AcWing
             url: solution/acwing
+          - title: Codeforces
+            url: solution/codeforces
+          - title: 洛谷
+            url: solution/luogu
           - title: POJ
             url: solution/poj
