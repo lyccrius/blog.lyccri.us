@@ -37,6 +37,13 @@ entries:
             url: course/acming/sfjck
       - title: NOI 大纲
         url: course/noi/da-gang
+        entries:
+          - title: 入门级
+            url: course/noi/junior-level
+          - title: 提高级
+            url: course/noi/senior-level
+          - title: NOI级
+            url: course/noi/noi-level
       - title: 算法竞赛
         url: course/sfjs
         entries: 
