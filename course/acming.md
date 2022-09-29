@@ -1,5 +1,5 @@
 ---
 layout: course
 which_category: acming
-title: AcWing
+title: AcWing 活动课学习笔记
 ---
