@@ -1,5 +1,5 @@
 ---
 layout: course
 which_category: junior-level
-title: 提高级
+title: 入门级
 ---
