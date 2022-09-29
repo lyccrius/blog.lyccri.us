@@ -12,7 +12,7 @@ categories: oi
 
 所有的 `#include` 指令必须放置于整个程序开头。
 
-~~不应该使用 `using namespace std;`。~~
+不应该使用 `using namespace std;`。
 
 `main` 函数应该放置于整个程序末尾。
 
