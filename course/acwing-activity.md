@@ -1,5 +1,5 @@
 ---
 layout: course
 which_category: acwing-activity
-title: AcWing在线活动
+title: "AcWing 在线活动"
 ---

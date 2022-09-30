@@ -1,5 +1,5 @@
 ---
 layout: course
 which_category: noi-level
-title: NOI级
+title: "《NOI大纲》NOI级"
 ---

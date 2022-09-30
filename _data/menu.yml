@@ -29,10 +29,10 @@ entries:
   - title: course
     entries:
       - title: AcWing
-        url: course/acming
+        url: course/acwing-activity
         entries:
           - title: 算法基础课
-            url: course/acming/sfjck
+            url: course/acwing-activity/sfjck
       - title: NOI 大纲
         url: course/noi/da-gang
         entries:

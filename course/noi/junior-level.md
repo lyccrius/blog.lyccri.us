@@ -1,5 +1,5 @@
 ---
 layout: course
 which_category: junior-level
-title: 入门级
+title: "《NOI大纲》入门级"
 ---
