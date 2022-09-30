@@ -1,10 +1,10 @@
 ---
 layout: page
-title: "About"
-permalink: /about
+title: "Find me"
+permalink: /find-me
 ---
 
-> ## Status
+> # Status
 > * Lyccrius
 > * 理特班 WHKer
 > * 高一现役 OIer
