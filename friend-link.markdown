@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Friend Link
-permalink: /friend-link/
+title: "Friend Link"
+permalink: /friend-link
 ---
 
 > <a href="https://blog.woshiluo.com" target="_blank">Woshiluo's Notebook -「Jump up HIGH!!」</a>  
