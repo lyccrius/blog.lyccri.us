@@ -10,3 +10,4 @@ permalink: /find-me
 > * <a href="https://github.com/Lyccrius" target="_blank">Github</a>
 > * <a href="https://www.luogu.com.cn/user/278046" target="_blank">Luogu</a>
 > * <a href="https://steamcommunity.com/id/Lyccrius" target="_blank">Steam</a>
+> * <a href="https://twitter.com/Lyccrius" target="_blank">Twitter</a>
