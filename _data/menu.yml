@@ -6,20 +6,18 @@ entries:
     entries:
       - title: about
         url: about
+      - title: contact
+        url: mailto:lyccrius@outlook.com
+      - title: find me
+        url: find-me
+      - title: friend link
+        url: friend-link
+      - title: github repo
+        url: https://github.com/lyccrius/lyccrius.github.io
       - title: issue
         url: issue
       - title: rss
         url: feed.xml
-      - title: contact
-        url: mailto:lyccrius@outlook.com
-      - title: friend-link
-        url: friend-link
-      - title: github repo
-        url: https://github.com/lyccrius/lyccrius.github.io
-        entries:
-        - title: "Using theme <a href='https://github.com/riggraz/no-style-please/'>no-style-please</a>"
-        - title: "Built with <a href='https://www.jekyll.com.cn'>Jekyll</a>"
-        - title: "Built on <a href='https://pages.github.com'>Github Pages</a>"
 
   - title: recent posts
     post_list:
