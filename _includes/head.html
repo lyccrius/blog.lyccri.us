@@ -37,8 +37,14 @@
   <script> 
     MathJax = {
       tex: {
-        inlineMath: [['$', '$']],
+        inlineMath: [['$', '$'], ["\\(","\\)"]],
+        displayMath: [['$$','$$'], ["\\[","\\]"]],
         processEscapes: true
+      },
+      "CommonHTML": {
+        linebreaks: { 
+          automatic: true 
+        } 
       }
     };
     </script>
