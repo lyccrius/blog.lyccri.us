@@ -81,6 +81,8 @@ entries:
     entries:
       - title: OJ
         entries:
+          - title: 51nod
+            url: solution/51nod
           - title: AcWing
             url: solution/acwing
           - title: Codeforces
