@@ -3,7 +3,7 @@ layout: post
 title: "c++中cin和scanf的区别是什么？"
 date:   2022-10-01
 author: 庄严
-categories: essay oi
+categories: oi
 ---
 
 > 原文链接：<a href="https://www.zhihu.com/question/56295735/answer/148665645" target="_blank">c++中cin和scanf的区别是什么？ - 知乎</a>
