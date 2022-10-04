@@ -28,7 +28,7 @@ entries:
 
   - title: course
     entries:
-      - title: AcWing在线活动
+      - title: AcWing 在线活动
         url: course/acwing-activity
         entries:
           - title: 算法基础课
