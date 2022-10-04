@@ -28,11 +28,24 @@ entries:
 
   - title: course
     entries:
-      - title: AcWing
+      - title: AcWing在线活动
         url: course/acwing-activity
         entries:
           - title: 算法基础课
             url: course/acwing-activity/sfjck
+      - title: 洛谷网校
+        url: course/luogu-class
+        entries:
+          - title: 2022 洛谷月赛讲评年卡
+            url: course/luogu-class/lgbook4
+          - title: 算法专题 - 数据结构专题（进阶）
+            url: course/luogu-class/yugu22smi1
+          - title: 算法专题 - 数学思维专题（进阶）
+            url: course/luogu-class/yugu22smi2
+          - title: 算法专题 - 动态规划专题（进阶）
+            url: course/luogu-class/yugu22smi3
+          - title: 洛谷 2022 算法竞赛秋令营 - 提高组
+            url: course/luogu-class/yugu22atg
       - title: NOI 大纲
         url: course/noi/da-gang
         entries:
