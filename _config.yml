@@ -5,6 +5,7 @@ url: https://lyccrius.github.io # root address of the site
 baseurl: "" # subpath of the site, e.g. "/blog" (leave it blank "" if you're site shouldn't use a subpath)
 description: > # description of the site (multiple lines allowed)
   This is Lyccrius's blog.
+  <a href="https://codeforces.com/profile/Lyccrius" target="_blank"><img src="https://cfrating.ihcr.top/?user=Lyccrius"></a>
 
 permalink: /:categories/:title
 
@@ -17,7 +18,7 @@ theme_config:
   appearance: "auto" # can be "light", "dark" or "auto"
   back_home_text: ".." # customize text for homepage link in post layout
   date_format: "%Y-%m-%d" # customize how date is formatted
-  show_description: false # show blog description in home page
+  show_description: true # show blog description in home page
 
 sass:
   style: :compressed
