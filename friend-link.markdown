@@ -4,8 +4,10 @@ title: "Friend Link"
 permalink: /friend-link
 ---
 
-> <a href="https://blog.woshiluo.com" target="_blank">Woshiluo's Notebook -「Jump up HIGH!!」</a>  
+> [cjh-hhz](https://cjh-hhz.github.io)
 
-> <a href="https://cjh-hhz.github.io" target="_blank">cjh-hhz｜蒻蒻虫</a>  
+> [MisakaE](http://misakae.live)
 
-> <a href="http://misakae.live" target="_blank">MisakaE</a>
+> [StudyingFather](https://studyingfather.com/)
+
+> [Woshiluo](https://blog.woshiluo.com)
