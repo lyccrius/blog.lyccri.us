@@ -14,8 +14,8 @@ entries:
         url: friend-link
       - title: github repo
         url: https://github.com/lyccrius/lyccrius.github.io
-      - title: issue
-        url: issue
+      - title: moment
+        url: moment
       - title: rss
         url: feed.xml
 
