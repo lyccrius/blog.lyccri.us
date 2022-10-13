@@ -7,11 +7,11 @@ layout: default
   {%-if site.theme_config.show_description-%}
     <p>{{ site.description }}</p>
   {%-endif-%}
-  <blockquote><p class="hitokoto">hitokoto</p></blockquote>
+  <blockquote><p class="content">hitokoto</p></blockquote>
   <script src="https://cdn.bootcss.com/jquery/2.0.2/jquery.min.js"></script>
-  <script src="https://sunpma.com/other/hitokoto/">
-    $.post("https://sunpma.com/other/hitokoto/", function(hitokoto) {
-        $(".hitokoto").html(hitokoto);
+  <script src="https://hitokoto.lyccrius.site/">
+    $.post("https://hitokoto.lyccrius.site/", function(hitokoto) {
+        $(".content").html(hitokoto);
     });
   </script>
 </header>
