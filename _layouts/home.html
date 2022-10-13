@@ -8,7 +8,7 @@ layout: default
     <p>{{ site.description }}</p>
   {%-endif-%}
   <blockquote><p class="content">hitokoto</p></blockquote>
-  <script src="https://cdn.bootcss.com/jquery/2.0.2/jquery.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://hitokoto.lyccrius.site/">
     $.post("https://hitokoto.lyccrius.site/", function(hitokoto) {
         $(".content").html(hitokoto);
