@@ -9,11 +9,11 @@ layout: default
   {%-endif-%}
   <blockquote><p class="hitokoto">hitokoto</p></blockquote>
   <script src="https://cdn.bootcss.com/jquery/2.0.2/jquery.min.js"></script>
-    <script>
-        $.post("https://hitokoto.lyccrius.site", function(hitokoto) {
-            $(".hitokoto").html(hitokoto);
-        });
-    </script>
+  <script src="https://hitokoto.lyccrius.site">
+    $.post("https://hitokoto.lyccrius.site", function(hitokoto) {
+        $(".hitokoto").html(hitokoto);
+    });
+  </script>
 </header>
 
 {%-include menu_item.html collection=site.data.menu.entries-%}
