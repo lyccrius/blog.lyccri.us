@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "《白洋淀纪事》光荣"
+title: "光荣"
 date:   2022-10-14
 categories: literature bai-yang-dian-ji-shi
 ---
