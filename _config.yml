@@ -25,16 +25,7 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-pandoc
 
-markdown: pandoc
-
-pandoc:
-  extensions:
-    - normalize
-    - smart
-    - mathjax
-    - csl: _styles/apa.csl
-    - bibliography: bibliography/references.bib
+markdown: maruku
 
 future: true
