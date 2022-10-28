@@ -16,18 +16,24 @@
 
   <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}" />
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}" />
-  
+
   <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      jax: ["input/TeX", "output/HTML-CSS"],
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
       tex2jax: {
         inlineMath: [ ['$', '$'], ["\\(","\\)"] ],
         displayMath: [ ['$$', '$$'], ["\\[","\\]"] ],
         processEscapes: false,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
       }
     });
-  </script>
+
+  MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for(i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+  });
+</script>
 </head>
