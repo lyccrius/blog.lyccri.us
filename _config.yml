@@ -26,9 +26,6 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-markdown: kramdown
-
-kramdown:
-  math_engine: katex
+markdown: marked
 
 future: true
