@@ -28,4 +28,7 @@ plugins:
 
 markdown: kramdown
 
+kramdown:
+  math_engine: katex
+
 future: true
