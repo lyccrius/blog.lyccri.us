@@ -17,9 +17,9 @@ permalink: /about
 > * `2022-2025` 乌鲁木齐市第一中学
 
 > $$OJ$$
-> * [![](https://atrating.baoshuo.dev/rating?username=Lyccrius)](https://atcoder.jp/users/Lyccrius)  
-> * [![](https://cf-rating.lyccrius.site/?user=Lyccrius)](https://codeforces.com/profile/Lyccrius)  
-> * [![](https://cf-rating.lyccrius.site/?user=overLeaf)](https://codeforces.com/profile/overLeaf)  
+> [![](https://atrating.baoshuo.dev/rating?username=Lyccrius)](https://atcoder.jp/users/Lyccrius)  
+> [![](https://cf-rating.lyccrius.site/?user=Lyccrius)](https://codeforces.com/profile/Lyccrius)  
+> [![](https://cf-rating.lyccrius.site/?user=overLeaf)](https://codeforces.com/profile/overLeaf)  
 > [![](https://luogu-card.lyccrius.site/about?id=278046&disable_cache=true)](https://www.luogu.com.cn/user/278046)
 
 > $$Prize$$
