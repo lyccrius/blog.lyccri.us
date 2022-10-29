@@ -4,19 +4,19 @@ title: "About"
 permalink: /about
 ---
 
-> $$About$$
+> $$About$$  
 > * Lyccrius
 > * 理特班 WHKer
 > * 高一现役 OIer
 > * 信息学竞赛特长生
 > * 中国共产主义青年团团员
 
-> $$Education$$
+> $$Education$$  
 > * `2013-2019` 乌鲁木齐市第七十九小学
 > * `2019-2022` 新疆生产建设兵团第一中学
 > * `2022-2025` 乌鲁木齐市第一中学
 
-> $$OJ$$
+> $$OJ$$  
 > [![](https://atrating.baoshuo.dev/rating?username=Lyccrius)](https://atcoder.jp/users/Lyccrius)  
 > [![](https://cf-rating.lyccrius.site/?user=Lyccrius)](https://codeforces.com/profile/Lyccrius)  
 > [![](https://cf-rating.lyccrius.site/?user=overLeaf)](https://codeforces.com/profile/overLeaf)  
