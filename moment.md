@@ -1,6 +1,4 @@
 ---
-layout: page
+layout: moment
 title:  Moment
 ---
-
-{%-include moment.html-%}
