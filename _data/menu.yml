@@ -32,6 +32,7 @@ entries:
       category: course
       show_more: true
       show_more_text: See more courses
+      show_more_url: course
 
   - title: essay
     post_list:
