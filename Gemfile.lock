@@ -70,7 +70,7 @@ GEM
     unicode-display_width (1.8.0)
 
 PLATFORMS
-  universal-darwin-21
+  x86_64-darwin-21
 
 DEPENDENCIES
   http_parser.rb (~> 0.6.0)
@@ -83,4 +83,4 @@ DEPENDENCIES
   wdm (~> 0.1.1)
 
 BUNDLED WITH
-   2.3.18
+   2.3.24
