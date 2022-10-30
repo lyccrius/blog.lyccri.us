@@ -29,11 +29,3 @@ plugins:
 markdown: kramdown
 
 future: true
-
-pageview:
-  provider: leancloud
-
-leancloud:
-  app_id: qL9s1CzbKT3teRVrhxBXUzRK-MdYXbMMI
-  app_key: T6EXQGpGcQMKfZ0gLD8f7AVD
-  app_class: statistic
