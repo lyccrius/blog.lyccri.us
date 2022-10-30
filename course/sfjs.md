@@ -1,7 +1,6 @@
 ---
-layout: course
-which_category: sfjs
-title: "《算法竞赛》"
+layout: page
+title:  算法竞赛
 ---
 
 * [学习指北](../_posts/course/sfjs/xue-xi-zhi-bei)
