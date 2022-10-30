@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  AcWing 在线活动
+title:  AcWing在线活动
 ---
 
-* [算法基础课](acwing-activity/sfjck)
+* [算法基础课](sfjck)
