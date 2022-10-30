@@ -27,15 +27,11 @@ entries:
       show_more_url: library
 
   - title: course
-    entries:
-      - title: AcWing在线活动
-        url: course/acwing-activity
-      - title: 洛谷网校
-        url: course/luogu-class
-      - title: NOI 大纲
-        url: course/noi
-      - title: 算法竞赛
-        url: course/sfjs
+    post_list:
+      limit: 3
+      category: course
+      show_more: true
+      show_more_text: See more courses
 
   - title: essay
     post_list:
@@ -44,6 +40,13 @@ entries:
       show_more: true
       show_more_text: See more essays...
       show_more_url: essay
+    entries:
+      - title: Diary
+        url: diary
+      - title: Newsletter
+        url: newsletter
+      - title: 闲话
+        url: xian-hua
 
   - title: oi
     post_list:
@@ -60,3 +63,11 @@ entries:
       show_more: true
       show_more_text: See more solutions...
       show_more_url: solution
+  
+  - title: whk
+    post_list:
+      limit: 3
+      category: whk
+      show_more: true
+      show_more_text: See more whk...
+      show_more_url: whk
