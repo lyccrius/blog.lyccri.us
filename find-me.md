@@ -1,7 +1,6 @@
 ---
 layout: page
-title: "Find me"
-permalink: /find-me
+title:  Find me
 ---
 
 > * <a href="https://www.acwing.com/user/myspace/index/204721" target="_blank">AcWing</a>

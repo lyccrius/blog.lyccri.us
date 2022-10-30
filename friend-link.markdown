@@ -1,7 +1,6 @@
 ---
 layout: page
-title: "Friend Link"
-permalink: /friend-link
+title:  Friend Link
 ---
 
 以下内容按 id 字符串的 ASCII 字典序排序。
