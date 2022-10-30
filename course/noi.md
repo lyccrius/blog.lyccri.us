@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "《NOI大纲》"
+title:  NOI大纲
 ---
 
 * [《NOI大纲》](../_posts/course/noi/da-gang)
