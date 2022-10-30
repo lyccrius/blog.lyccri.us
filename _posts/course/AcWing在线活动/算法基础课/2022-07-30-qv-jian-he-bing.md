@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "AcWing 算法基础课 区间合并"
+title: "区间合并"
 date:   2022-07-30
 categories: course acwing-activity sfjck
 ---
