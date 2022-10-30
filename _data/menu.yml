@@ -31,7 +31,7 @@ entries:
       limit: 3
       category: course
       show_more: true
-      show_more_text: See more courses
+      show_more_text: See more course...
       show_more_url: course
 
   - title: essay
@@ -39,7 +39,7 @@ entries:
       limit: 3
       category: essay
       show_more: true
-      show_more_text: See more essays...
+      show_more_text: See more essay...
       show_more_url: essay
     entries:
       - title: Diary
@@ -62,7 +62,7 @@ entries:
       limit: 3
       category: solution
       show_more: true
-      show_more_text: See more solutions...
+      show_more_text: See more solution...
       show_more_url: solution
   
   - title: whk
