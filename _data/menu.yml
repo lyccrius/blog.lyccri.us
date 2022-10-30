@@ -60,16 +60,3 @@ entries:
       show_more: true
       show_more_text: See more solutions...
       show_more_url: solution
-    entries:
-      - title: OJ
-        entries:
-          - title: 51nod
-            url: solution/51nod
-          - title: AcWing
-            url: solution/acwing
-          - title: CodeForces
-            url: solution/codeforces
-          - title: 洛谷
-            url: solution/luogu
-          - title: POJ
-            url: solution/poj
