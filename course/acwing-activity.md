@@ -1,5 +1,7 @@
 ---
-layout: course
+layout: page
 which_category: acwing-activity
 title: "AcWing 在线活动"
 ---
+
+* [算法基础课](acwing-activity/sfjck)
