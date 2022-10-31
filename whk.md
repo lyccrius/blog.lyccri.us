@@ -1,6 +1,6 @@
 ---
 layout: page
-title:  Solution
+title:  文化课
 ---
 
 * [语文](whk/chinese)
