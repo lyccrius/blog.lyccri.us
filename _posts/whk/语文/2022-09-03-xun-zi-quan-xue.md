@@ -2,7 +2,7 @@
 layout: post
 title: "荀子为何如此强调后天学习的重要性？"
 date:   2022-09-03
-categories: essay
+categories: whk chinese
 ---
 
 “人之性恶，其善者伪也。”根据荀子所提出的 “性恶论”，他认为人的本性是恶的，而为善需要人为努力。
