@@ -1,5 +1,5 @@
 ---
 layout: archive
 which_category: codeforces
-title: "Solution to Codeforces"
+title: "Solution to CodeForces"
 ---
