@@ -13,7 +13,9 @@ entries:
       - title: friend link
         url: friend-link
       - title: github repo
-        url: https://github.com/lyccrius/lyccrius.github.io
+        url: https://github.com/lyccrius/blog.lyccrius.site
+      - title: home page
+        url: https://lyccrius.site
       - title: moment
         url: moment
       - title: rss
