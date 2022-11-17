@@ -2,7 +2,7 @@
 layout: post
 title:  寄予后人
 date:   2022-11-17
-categories: 2022-11-17
+categories: oi
 ---
 
 ## 图论
