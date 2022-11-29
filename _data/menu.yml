@@ -28,6 +28,13 @@ entries:
       show_more_text: See library...
       show_more_url: library
 
+  - title: author
+    entries:
+      - title: P_L_Y
+        url: p_l_y
+      - title: 梧桐
+        url: wu-tong
+
   - title: course
     post_list:
       limit: 3
