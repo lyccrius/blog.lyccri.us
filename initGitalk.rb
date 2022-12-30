@@ -1,6 +1,6 @@
 username = "Lyccrius" # GitHub 用户名
-new_token = "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"  # GitHub Token
-repo_name = "Gitalk" # 存放 issues
+token = "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"  # GitHub Token
+repo_name = "blog.lyccrius.site" # 存放 issues
 sitemap_url = "https://blog.lyccrius.site/sitemap.xml" # sitemap
 kind = "Gitalk" # "Gitalk" or "gitment"
 
