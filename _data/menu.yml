@@ -49,6 +49,7 @@ entries:
       category: diary
       show_more: true
       show_more_text: See more diaries...
+      show_more_url: diary
 
   - title: essay
     post_list:
