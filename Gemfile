@@ -6,4 +6,4 @@ gem "kramdown-parser-gfm"
 
 gem "no-style-please"
 
-ruby initGitalk.rb
+gemspec
