@@ -1,5 +1,5 @@
 ---
 layout: archive
-title:  刷题记录
+title:  训练记录
 which_category: train
 ---
