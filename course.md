@@ -3,12 +3,15 @@ layout: page
 title:  Course
 ---
 
+## ACM-ICPC
+
 ## Misc
 
 * [哔哩哔哩](course/bilibili)
 
 ## OI
 
+* [ACM-ICPC系列丛书](course/acm-icpc)
 * [AcWing在线活动](course/acwing-activity)
 * [洛谷网校](course/luogu-class)
 * [NOI大纲](course/noi)
