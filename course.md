@@ -15,6 +15,7 @@ title:  Course
 * [AcWing在线活动](course/acwing-activity)
 * [洛谷网校](course/luogu-class)
 * [NOI大纲](course/noi)
+* [清北学堂](course/qbxt)
 * [算法竞赛](course/sfjs)
 * [深入浅出程序设计竞赛](course/srqc)
 
