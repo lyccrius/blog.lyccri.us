@@ -316,7 +316,7 @@ categories: whk fault
 
 ### 第一课时 氯气的性质
 
-### 第二课时 氯气的实验室执法、氯离子的检验
+### 第二课时 氯气的实验室制法、氯离子的检验
 
 ### 第三节 物质的量
 
@@ -610,6 +610,91 @@ categories: whk fault
 * 室温下，$\text{Na}_2\text{CO}_3$ 的溶解度大于 $\text{NaHCO}_3$；
 * 碱性强弱与浓度有关；
 * $\text{OH}^-$ 未参与反应的实验依据是**加入 $\text{Na}_2\text{CO}_3$ 溶液和加入蒸馏水的 $\text{pH}$ 变化曲线相似。
+
+## 课时跟踪检测（九） 氯气的性质
+
+### 基础·巩固练
+
+#### 1.
+
+* 液氯的主要成分为 $\text{Cl}_2$；
+* 石灰水处理液氯：$2\text{Cl}_2 + 2\text{Ca(OH)}_2 = \text{CaCl}_2 + \text{Ca(ClO)}_2 + 2\text{H}_2\text{O}$；
+* 氯气有毒，氯气泄漏，应将人群朝逆风方向疏散；
+* 氢氧化钠具有强腐蚀性，氯气泄漏时用浸有肥皂水的毛巾捂住口鼻。
+
+#### 2.
+
+* 漂白粉的有效成分是 $\text{Ca(ClO)}_2$，常用作杀菌消毒剂。
+
+#### 3.
+
+* 氯气和水反应生成盐酸和次氯酸，次氯酸有漂白性，但氯气没有漂白性；
+* 氯气和氢氧化钠溶液反应生成氯化钠和次氯酸钠，可用氢氧化钠溶液吸收氯气，防止污染环境；
+* 氯气、液氯为纯净物，氯水是氯气的水溶液，为混合物；
+* 氯水中存在：$\text{Cl}_2 + \text{H}_2\text{O} = \text{H}^+ + \text{Cl}^- + \text{HClO}$，$\text{HClO}$ 不稳定易分解：$2\text{HClO} \frac{光照}{——} 2\text{HCl} + \text{O}_2 \uparrow$，饱和氯水在光照下有气泡产生，其主要成分是氧气。
+
+#### 4.
+
+* 浓盐酸和二氧化锰固体加热时可以生成氯气；
+* 氯气和氢氧化钙反应可以生成次氯酸钙、氯化钾和水；
+* 次氯酸钙溶液中通入二氧化碳即可生成次氯酸；
+* 次氯酸的酸性小于碳酸，次氯酸不能制备二氧化碳。
+
+#### 5.
+
+* $\text{Cl}_2 + 2\text{NaOH} = \text{NaCl} + \text{NaClO} + \text{H}_2\text{O}$，导致烧瓶中气体压强减小.。
+
+#### 6.
+
+* $\text{Cl}_2$ 消毒是因为 $\text{Cl}_2$ 与 $\text{H}_2\text{O}$ 反应生成了强氧化性的 $\text{HClO}$，$\text{HClO}$ 不稳定易分解，因此将 $\text{Cl}_2$ 制成有效成分为 $\text{Ca(ClO)}_2$ 的漂白粉，稳定性强，便于贮存和运输；
+* 工业上用 $\text{Cl}_2$ 和石灰乳制备漂白粉，方程式为 $2\text{Cl}_2 + 2\text{Ca(OH)}_2 = \text{CaCl}_2 + \text{Ca(ClO)}_2 + 2\text{H}_2\text{O}$；
+* 生石灰在空气中久置变质，发生：$\text{CaO} + \text{H}_2\text{O} = \text{Ca(OH)}_2, \text{Ca(OH)}_2 + \text{CO}_2 = \text{CaCO}_3\downarrow + \text{H}_2\text{O}$，属于非氧化还原反应；
+* 漂白粉在空气中久置，先发生：$\text{Ca(ClO)}_2 + \text{H}_2\text{O} + \text{CO}_2 = \text{CaCO}_3 + 2\text{HClO}$，属于非氧化还原反应，光照后发生：$2\text{HClO} \frac{光照}{——} 2\text{HCl} + \text{O}_2\uparrow$，属于氧化还原反应；
+* $\text{NaOH}$ 与 $\text{CO}_2$ 发生反应：$2\text{NaOH} + \text{CO}_2 = \text{Na}_2\text{CO}_3 + \text{H}_2\text{O}$，属于非氧化还原反应；
+* $\text{NaOH}$ 与 $\text{CO}_2$ 发生反应：$2\text{NaOH} + \text{CO}_2 = \text{Na}_2\text{CO}_3 + \text{H}_2\text{O}$，属于非氧化还原反应；
+* $\text{Na}_2\text{O}_2$ 在空气中与 $\text{CO}_2$ 或 $\text{H}_2\text{O}$ 反应：$2\text{Na}_2\text{O}_2 + 2\text{CO}_2 = 2\text{Na}_2\text{CO}_3 + \text{O}_2$、$2\text{Na}_2\text{O}_2 + 2\text{H}_2\text{O} = 4\text{NaOH} + \text{O}_2\uparrow$，均属于氧化还原反应；
+* $\text{Ca(ClO)}_2$ 溶液可以与空气中的 $\text{CO}_2$ 反应生成具有强氧化性的 $\text{HClO}$，起到漂白作用，因此漂白效果更好；
+* 若将漂白液（有效成分 $\text{NaClO}$）与洁厕灵（有效成分是盐酸）混合使用，则会产生有毒气体，$\text{ClO}^-$ 具有强氧化性，$\text{Cl}^-$ 具有还原性，二者反应的离子方程式为 $\text{ClO}^- + \text{Cl}^- + 2\text{H}^+ = \text{Cl}_2\uparrow + \text{H}_2\text{O}$。
+
+### 创新·强化练
+
+#### 7.
+
+* 取出新制氯水，光照一段时间，溶液 $c(\text{H}^+)$ 增大，漂白性减弱，原因是 $\text{Cl}_2 + \text{H}_2\text{O} = \text{HCl} + \text{HClO}, 2\text{HClO} \frac{光照}{——} 2\text{HCl} + \text{O}_2\uparrow$；
+* 取出新制氯水，加入饱和 $\text{NaCl}$ 溶液，$\text{Cl}_2$ 的溶解度减小，说明可用饱和食盐水出去 $\text{Cl}_2$ 中混有的 $\text{HCl}$。
+
+#### 10.
+
+* 氯气与湿润的碳酸钠反应时发生的是歧化反应：$2\text{Cl}_2 + 2\text{Na}_2\text{CO}_3 + \text{H}_2\text{O} = 2\text{NaHCO}_2 + 2\text{NaCl} + \text{Cl}_2\text{O}$，$\text{NaCl}$ 中的氯元素没有用于制取漂白精，氯原子的利用率不是 $100%$。
+
+#### 11.
+
+* $\text{KClO}_3$ 在 $400^\circ\text{C}$ 时分解只生成两种盐，其中一种是无氧酸盐，另一种盐的阴、阳离子个数比为 $1 : 1$，则该反应的化学方程式为 $4\text{KClO}_3 \frac{400^\circ}{——} 3\text{KClO}_4 + \text{KCl}$；
+* $\text{Cl}_2\text{O}$ 可用潮湿的 $\text{Cl}_2$ 与 $\text{Na}_2\text{CO}_3$ 反应制取，同时生成 $\text{NaHCO}_3$，反应中 $\text{Cl}_2$ 既体现氧化性，又体现还原性，该反应的化学方程式为：$2\text{Cl}_2 + 2\text{Na}_2\text{CO}_3 + \text{H}_2\text{O} = \text{Cl}_2\text{O} + 2\text{NaCl} + 2\text{NaHCO}_3$。
+
+#### 12.
+
+* $\text{pH}$ 值减小，则生成了 $\text{H}^+$，$\text{Cl}^-$ 浓度增大，则生成了 $\text{Cl}^-$，所以次氯酸光照分解所得到的产物中含有 $\text{HCl}$；
+* 次氯酸光照分解成氯化氢和氧气，离子方程式为 $2\text{HClO} \frac{光照}{——} 2\text{H}^+ + 2\text{Cl}^- + \text{O}_2\uparrow$。
+
+## 课时跟踪检测（十） 氯气的实验室制法、氯离子的检验
+
+### 基础·巩固练
+
+#### 1. 
+
+* 在集气瓶的导管口处放一片湿润的淀粉碘化钾试纸，可以证明是否有氯气逸出。
+
+#### 3.
+
+* 硫酸银微溶。
+
+#### 5.
+
+* 氯气和与碱反应，碱石灰含有氢氧化钠和氧化钙，不可采用碱石灰干燥氯气；
+* 可通过排饱和食盐水法收集氯气；
+* 常温下，可通过加压使氯气液化而储存于钢瓶中；
+* 工业上，常用氢气和氯气反应生成的氯化氢溶于水制取盐酸。
 
 ## 阶段重点练（三）
 
