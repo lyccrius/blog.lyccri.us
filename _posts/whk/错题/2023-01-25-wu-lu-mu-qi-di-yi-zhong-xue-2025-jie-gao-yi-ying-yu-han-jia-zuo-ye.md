@@ -477,3 +477,10 @@ categories: whk fault
     *   not only 部分用部分倒装结构
         *   not only + 助动词 + 主语 + 谓语的剩余部分 + 其它成分
     *   but also 引导的句子用正常的陈述与许
+3.  
+4.  
+5.  
+6.  *   variety 种类
+    *   quality 质量
+    *   charity 慈善机构
+    *   facility 设施
