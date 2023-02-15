@@ -3,7 +3,7 @@ layout: page
 title:  Friend Link
 ---
 
-以下内容按 id 字符串的 ASCII 字典序排序。
+以下内容按 ID 字典序排序。
 
 > [15owzLy1](https://www.cnblogs.com/15owzLy1)
 
