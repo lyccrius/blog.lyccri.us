@@ -18,6 +18,8 @@ entries:
         url: https://lyccrius.site
       - title: moment
         url: moment
+      - title: problem set
+        url: https://github.com/Lyccrius/ProblemSet
       - title: rss
         url: feed.xml
 
