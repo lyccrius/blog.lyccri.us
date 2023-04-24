@@ -67,4 +67,16 @@
   <script id="MathJax-script" async src="https://cdn.staticfile.org/mathjax/3.0.1/es5/tex-svg.js"></script>
   -->
 
+  <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+  <script>
+    $.getScript('https://ip.ws.126.net/ipquery', function(){
+      console.log(localAddress.province)    
+      if(localAddress.province.indexOf('新疆') != -1){        
+        window.location.href = 'https://lyccrius.site';      
+      }else{        
+      return;      
+      } 
+  });
+</script>
+
 </head>
