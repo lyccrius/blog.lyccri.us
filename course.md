@@ -14,6 +14,7 @@ title:  Course
 * [ACM-ICPC系列丛书](course/acm-icpc)
 * [AcWing在线活动](course/acwing-activity)
 * [代码源](course/dmy)
+* [号爸](course/hb)
 * [洛谷网校](course/luogu-class)
 * [能力提升综合题单](course/sfoi)
 * [NOI大纲](course/noi)
