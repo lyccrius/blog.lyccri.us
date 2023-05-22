@@ -1,5 +1,5 @@
 ---
 layout: archive
-which_category: maths
-title: "数学"
+which_category: physics
+title: "物理"
 ---
