@@ -37,6 +37,14 @@ entries:
       - title: 梧桐
         url: wu-tong
 
+  - title: blossom
+    post_list:
+      limit: 7
+      category: blossom
+      show_more: true
+      show_more_text: See more blossoms...
+      show_more_url: blossom
+
   - title: course
     post_list:
       limit: 3
