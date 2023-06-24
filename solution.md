@@ -1,9 +1,5 @@
 ---
-layout: page
+layout: archive
 title:  Solution
+which_category: solution
 ---
-
-* [AcWing](solution/acwing)
-* [CodeForces](solution/codeforces)
-* [Luogu](solution/luogu)
-* [POJ](solution/poj)

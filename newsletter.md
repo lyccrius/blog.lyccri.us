@@ -1,5 +1,5 @@
 ---
 layout: archive
-title:  newsletter
+title:  Newsletter
 which_category: newsletter
 ---
