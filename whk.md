@@ -1,11 +1,5 @@
 ---
-layout: page
-title:  文化课
+layout: archive
+title:  WHK
+which_category: whk
 ---
-
-* [语文](whk/chinese)
-* [数学](whk/maths)
-
-***
-
-* [错题](whk/fault)
