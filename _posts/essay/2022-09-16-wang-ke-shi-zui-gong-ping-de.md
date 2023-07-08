@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "「转载」网课是最公平的"
+title: "网课是最公平的"
 date:   2022-09-16
 categories: essay
 ---

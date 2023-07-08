@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "「转载」我中考时为什么没有考入山东省实验中学呢？"
+title: "我中考时为什么没有考入山东省实验中学呢？"
 date:   2022-08-23
-author: —扶苏—-
+author: 一扶苏一
 categories: essay
 ---
 
