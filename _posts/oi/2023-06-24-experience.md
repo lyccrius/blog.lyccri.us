@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  经验主义
-date:   2023-07-21
+date:   2023-07-22
 categories: oi
 ---
 
