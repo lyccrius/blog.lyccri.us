@@ -19,7 +19,7 @@ entries:
 
   - title: recent posts
     post_list:
-      limit: 15
+      limit: 10
       show_more: true
       show_more_text: See library...
       show_more_url: library
