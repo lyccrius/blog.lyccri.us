@@ -2,7 +2,7 @@
 layout: post
 title:  元素周期律
 date:   2023-02-07
-categories: 
+categories: chemistry
 ---
 
 *   **内容**：元素性质随核电荷数的递增而呈周期性的变化。
