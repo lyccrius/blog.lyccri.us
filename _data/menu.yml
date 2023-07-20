@@ -14,14 +14,12 @@ entries:
         url: friend-link
       - title: github repo
         url: https://github.com/lyccrius/blog.lyccrius.site
-      - title: home page
-        url: https://lyccrius.site
       - title: rss
         url: feed.xml
 
   - title: recent posts
     post_list:
-      limit: 5
+      limit: 15
       show_more: true
       show_more_text: See library...
       show_more_url: library
