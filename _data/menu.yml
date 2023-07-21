@@ -4,12 +4,6 @@
 entries:
   - title: info
     entries:
-      - title: about
-        url: about
-      - title: contact
-        url: mailto:lyccrius@outlook.com
-      - title: find me
-        url: find-me
       - title: friend link
         url: friend-link
       - title: github repo
