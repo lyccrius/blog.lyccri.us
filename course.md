@@ -1,6 +1,7 @@
 ---
-layout: page
+layout: archive
 title:  Course
+which_category: course
 ---
 
 ## Misc
@@ -14,3 +15,5 @@ title:  Course
 * [洛谷网校](course/luogu-class)
 * [算法竞赛](course/sfjs)
 * [深入浅出程序设计竞赛](course/srqc)
+
+***

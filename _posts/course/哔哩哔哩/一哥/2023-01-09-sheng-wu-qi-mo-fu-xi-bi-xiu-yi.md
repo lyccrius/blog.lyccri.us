@@ -3,7 +3,7 @@ layout: post
 title:  生物期末复习必修一
 date:   2023-01-09
 author: 喵喵老师
-categories: course bilibili 1
+categories: course bilibili yi-ge
 ---
 
 ## 元素

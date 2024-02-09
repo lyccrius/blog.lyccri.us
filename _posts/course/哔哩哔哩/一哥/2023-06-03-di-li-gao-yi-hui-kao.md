@@ -3,7 +3,7 @@ layout: post
 title:  地理高一会考
 date:   2023-06-04
 author: 冷冷老师
-categories: course bilibili 1
+categories: course bilibili yi-ge
 ---
 
 ## 地球的宇宙环境
