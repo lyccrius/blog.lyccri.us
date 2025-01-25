@@ -6,6 +6,10 @@
 
     &.ioda { filter: invert(0); }
   }
+  .emoji { filter: invert(1); }
+  iframe {
+    filter: invert(1);
+  }
 }
 
 body[a="dark"] { @include dark-appearance; }
@@ -21,7 +25,7 @@ body[a="dark"] { @include dark-appearance; }
 // see: https://stackoverflow.com/a/61265706
 html, body { background: white; }
 
-html { height: 100%; }
+html { height: 100%; scroll-behavior: smooth; }
 
 body {
   color: black;
@@ -43,7 +47,7 @@ p { margin: 1rem 0; }
 
 li { margin: 0.4rem 0; }
 
-// *:target { background: yellow; }
+*:target { background: yellow; }
 
 .w {
   margin: 0 auto;
@@ -67,7 +71,6 @@ table, th, td {
 }
 
 code {
-  tab-size: 4;
   color: white;
   background: black;
 }
@@ -84,27 +87,11 @@ blockquote {
   border: thin solid black;
   padding: 1rem;
 
-  p {
-    margin: 1;
-  }
-  pre {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
+  p { margin: 0; }
 }
 
 img {
   max-width: 100%;
   display: block;
   margin: 0 auto;
-}
-
-video {
-
-  height: 100%;
-  
-  width: 100%;
-  
-  display: block;
-  
 }
