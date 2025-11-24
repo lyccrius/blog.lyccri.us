@@ -155,7 +155,7 @@ categories:
 *   AF3317
 *   AF4320
 
-## QFFT
+## Quantitative Finance and FinTech
 
 *   AMA3304
 *   AMA4381
